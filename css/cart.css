@@ -1,14 +1,11 @@
 main{
     display: grid;
-    grid-template-areas: "article aside";
     grid-template-columns: 3fr 1fr;
 }
-article{
+.cartContainer{
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
     gap: 10px;
-    flex-grow: 1;
 }
 h1{
     font: var(--headingBig);
@@ -16,6 +13,7 @@ h1{
     color: var(--moreContrastText);
 }
 .gamecard3{
+    border-radius: 5px;
     display: flex;
     background-color: var(--primary);
     padding: 16px;
@@ -112,7 +110,7 @@ aside{
     padding: 16px;
     border-radius: 5px;
     gap: 10px;
-    max-height: 400px;
+    max-height: 450px;
 }
 .sumary{
     display: flex;
@@ -161,7 +159,6 @@ aside{
 }
 @media (max-width: 992px){
     main{
-        grid-template-areas: "article" "aside";
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
     }

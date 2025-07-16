@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="icon" type="image/png" href="./Asset/logoEG1.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/sharedComponent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>  
+        <button onclick="showNav(this)">
+                <i class="fa-solid fa-bars"></i>  
+        </button>
+        <nav> 
+            <div class="nav_left">
+                <a class="logo" href="home.html">
+                    <img id="logoEG" src="./Asset/logoEG.png" alt="logo">
+                </a>
+                <a href="home.html">Home</a>
+                <a href="store.html"> Store</a>
+                <a class="active" href="news.html">News</a>
+                <a href="contact.html"> Contact</a>
+                <a href="aboutus.html"> About Us</a>
+            </div>
+            <div class="nav_right">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="account.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>News</h1>
+        <div class="hotnews">
+            <h2>Hot news</h2>
+            <div class="news-container">
+                <div class="news">
+                    <div class="image-frame">
+                        <img src="Asset/hotnews1.jpg">
+                    </div>
+                    <div class="news-content">
+                        <div class="header">
+                            <span class="topic">Game update</span>
+                            <span class="game-name">Rimworld</span>
+                            <span class="time">3 days ago</span>
+                        </div>
+                        <h3>The RimWorld - Odyssey expansion is out now!</h3>
+                        <p>
+                            RimWorld’s free update 1.6 is out now - you don’t need to own Odyssey to get it. This update brings massive performance improvements, reworked map generation, flying animals, and quality-of-life changes across caravans, plans, building, UI, and more. Read more about it here or check out the changelog here.
+                        </p>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="image-frame">
+                        <img src="Asset/hotnews2.png">
+                    </div>
+                    <div class="news-content">
+                        <div class="header">
+                            <span class="topic">News</span>
+                            <span class="game-name">Stellaris</span>
+                            <span class="time">2 days ago</span>
+                        </div>
+                        <h3>Stellaris Dev Diary #387 - 4.0.21 is Out, What’s Next?</h3>
+                        <p>
+                            by Eladrin
+                            <br>
+                            Hello, Stellaris community!
+                            <br>
+                            Last week I said the next dev diary would be on the 26th, but I didn’t want to wait that long to discuss our plans moving forward.
+                            <br>
+                            This week we released 4.0.21, with the following changes:
+                        </p>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="image-frame">
+                        <img src="Asset/hotnews3.png">
+                    </div>
+                    <div class="news-content">
+                        <div class="header">
+                            <span class="topic">News</span>
+                            <span class="game-name">BODYCAM</span>
+                            <span class="time">1 day ago</span>
+                        </div>
+                        <h3>🔧 Roadmap Update – Optimization, Loadout, Zombie & More</h3>
+                        <p>
+                            Hi everyone,<br>
+                            We’re kicking off a new format here on Steam: regular updates on our roadmap progress.<br>
+                            We usually post dev leaks (images, info, early previews) on our official Discord, but since not everyone is there, we’ll now keep you updated here as well.                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="navButton">
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+            </div>
+        </div>
+        <div class="AllNewsGroup">
+        <h2>All news</h2>
+        <div class="allNews">
+            <div class="newsCard">
+                <div class="imgFrame">
+                    <img src="Asset/forza5.jpg">
+                </div>
+                    <div class="newsCardContent">
+                        <div class="header">
+                                <span class="topic">Event</span>
+                                <span class="game-name">Forza Horizon 5</span>
+                                <span class="time">3 days ago</span>
+                    </div>
+                    <h4>This Week’s Backstage Vote Features Extreme Speed for All Ages</h4>
+                    <p>
+                        The Horizon Backstage goes extreme! This week’s pairs feature a scaled-up version of a famous Hot Wheels car and a retro racer looking for a new time to shine.
+                    </p>
+                </div>
+            </div>
+            <div class="newsCard">
+                <div class="imgFrame">
+                    <img src="Asset/th.jpg">
+                </div>
+                    <div class="newsCardContent">
+                        <div class="header">
+                                <span class="topic">Event</span>
+                                <span class="game-name">Steam</span>
+                                <span class="time">3 days ago</span>
+                    </div>
+                    <h4>Fish on! The Steam Fishing Fest is here!</h4>
+                    <p>
+                        Steam's Fishing Fest is on now, with boatloads of deals and demos all week long. From now through June 23rd at 10am Pacific, you'll catch discounts on games that plop you right in those waders for fishing of all kinds.
+                        Commercial fishing? Yep. Casual fishing? You betcha. Navigating sinister waters to find fish? Of course!
+                        Check out the official trailer above, or head straight over to the event now! Steam Fishing Fest, on now through June 23rd at 10am Pacific.                    
+                    </p>
+                </div>
+            </div>
+            <div class="newsCard">
+                <div class="imgFrame">
+                    <img src="Asset/news1.png">
+                </div>
+                
+                    <div class="newsCardContent">
+                        <div class="header">
+                                <span class="topic">Event</span>
+                                <span class="game-name">TeamFortress 2</span>
+                                <span class="time">3 days ago</span>
+                    </div>
+                    <h4>Mann vs. Machine Maps Needed!</h4>
+                    <p>
+                        Thirteen years ago, we launched Mann vs. Machine, a chilling cautionary tale where an artificial consciousness tried to take all our jobs. You didn't know it back then, but that was actually a                     
+                    </p>
+                </div>
+            </div>
+            <div class="newsCard">
+                <div class="imgFrame">
+                    <img src="Asset/news2.png">
+                </div>
+                    <div class="newsCardContent">
+                        <div class="header">
+                                <span class="topic">News</span>
+                                <span class="game-name">Hades II</span>
+                                <span class="time">3 days ago</span>
+                    </div>
+                    <h4>Spread Fear in The Unseen Update</h4>
+                    <p>
+                        Our third Major Update for Hades II is finally here, focused on expanding core combat, Guardian encounters, and character relationships, with lots of new visual flair!                    
+                    </p>
+                </div>
+            </div>
+            <div class="newsCard">
+                <div class="imgFrame">
+                    <img src="Asset/news3.png">
+                </div>
+                    <div class="newsCardContent">
+                        <div class="header">
+                                <span class="topic">News</span>
+                                <span class="game-name">WH40K</span>
+                                <span class="time">3 days ago</span>
+                    </div>
+                    <h4>Dev Blog: Arbites Weaponry</h4>
+                    <p>
+                        Hey Everyone, <br>
+                        Today we’re showcasing the new tools of justice coming your way just for Arbites. In addition to the arsenal already at                    
+                    </p>
+                </div>
+            </div>
+            <div class="newsCard">
+                <div class="imgFrame">
+                    <img src="Asset/swbattlefront.jpg">
+                </div>
+                    <div class="newsCardContent">
+                        <div class="header">
+                                <span class="topic">News</span>
+                                <span class="game-name">SW: Battlefront™</span>
+                                <span class="time">3 days ago</span>
+                    </div>
+                    <h4>Get 90% off STAR WARS™ Battlefront™ II: Celebration Edition!</h4>
+                    <p>
+                        Only until July 10, get 90% off* STAR WARS™ Battlefront™ II: Celebration Edition, so you can be the hero that the galaxy needs in the ultimate STAR WARS™ battle fantasy.                    
+                    </p>
+                </div>
+            </div>
+            <div class="newsCard">
+                <div class="imgFrame">
+                    <img src="Asset/news4.png">
+                </div>
+                    <div class="newsCardContent">
+                        <div class="header">
+                                <span class="topic">News</span>
+                                <span class="game-name">Warthunder</span>
+                                <span class="time">3 days ago</span>
+                    </div>
+                    <h4>Decorate your Steam Profile with War Thunder’s Steam Points</h4>
+                    <p>
+                        Today we’re pleased to announce that we’ve added a full range of cosmetic items to the Steam Points Shop for War Thunder! If you’ve made Steam purchases or have simply been active on Steam, you’ve probably accumulated some Steam Points to spend in the Points Shop on the new War Thunder items:                    
+                    </p>
+                </div>
+            </div>
+            <div class="newsCard">
+                <div class="imgFrame">
+                    <img src="Asset/news5.png">
+                </div>
+                    <div class="newsCardContent">
+                        <div class="header">
+                                <span class="topic">News</span>
+                                <span class="game-name">R.E.P.O</span>
+                                <span class="time">3 days ago</span>
+                    </div>
+                    <h4>50 RAPID QUESTIONS with R.E.P.O. DEV</h4>
+                    <p>
+                        Hey hey semibots! <br>
+                        This week we are answering a final batch of questions from our discord before the update releases!                    
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <img id="img-footer" src="./Asset/logoEG.png" alt="">
+        <div class="footer-container">
+            <div>
+                <p>Browse</p>
+                <div class="browse">
+                    <a href="home.html">Home</a>
+                    <a href="store.html">Store</a>
+                    <a href="news.html">News</a>
+                    <a href="aboutus.html">About us</a>
+                    <a href="acount.html">Account</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+            </div>
+            <div>
+                <p>Folow us on</p>
+                <div class="follow">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <p>Contact</p>
+                <div class="contact">
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Khu 2, Đ. 3/2, P. Ninh Kiều, TP. Cần Thơ</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i>EG_Game@eg.com.vn</a>
+                    <a href="#"><i class="fa-solid fa-phone"></i>+84 19000009</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script/news.js"></script>
+    <script src="script/Nav.js"></script>
+</body>
+</html>

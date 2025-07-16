@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recovery</title>
+    <link rel="icon" type="image/png" href="./Asset/logoEG1.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>  
+        <nav>
+            <div class="nav_left">
+                <a class="logo" href="home.html">
+                    <img id="logoEG" src="./Asset/logoEG.png" alt="logo">
+                </a>
+                <a href="home.html">Home</a>
+                <a href="store.html"> Store</a>
+                <a class="active" href="news.html">News</a>
+                <a href="contact.html"> Contact</a>
+                <a href="aboutus.html"> About Us</a>
+            </div>
+            <div class="nav_right">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="account.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+        <main>
+            <form action="#" method="post">
+
+                <article class="Container">
+                    <h1>
+                        Account recovery
+                    </h1>
+                    <div>
+                        <div class="link-row">
+                            <p>A password recovery link has been sent to your email address.
+                                <a href="#">Please check your inbox</a>
+                            </p> <br>
+                            <p>
+                                If you do not recieve any email, perhaps your information was wrong or your email
+                                doesn't link to any account.
+                            </p>
+                        </div>
+                        <button type="button" onclick="next(this)">Back to login</button>
+                    </div>
+                </article>
+            </form>
+        </main>
+     <footer>
+        <img id="img-footer" src="./Asset/logoEG.png" alt="">
+        <div class="footer-container">
+            <div>
+                <p>Browse</p>
+                <div class="browse">
+                    <a href="home.html">Home</a>
+                    <a href="store.html">Store</a>
+                    <a href="news.html">News</a>
+                    <a href="aboutus.html">About us</a>
+                    <a href="acount.html">Account</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+            </div>
+            <div>
+                <p>Folow us on</p>
+                <div class="follow">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <p>Contact</p>
+                <div class="contact">
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Khu 2, Đ. 3/2, P. Ninh Kiều, TP. Cần Thơ</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i>EG_Game@eg.com.vn</a>
+                    <a href="#"><i class="fa-solid fa-phone"></i>+84 19000009</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function next(button){
+            window.location.href="account.html";
+        }
+    </script>
+    <script src="script/Nav.js"></script>
+    </body>
+
+</html>

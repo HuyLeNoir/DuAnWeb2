@@ -1,0 +1,144 @@
+main {
+  border-radius: 10px;
+  background-color: var(--primary);
+  width: 50%;
+  margin: auto;
+  padding: 40px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+.Container {
+  gap: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  font: var(--titleSmall);
+  color: var(--moreContrastText);
+}
+h2 {
+  font: var(--headingMedium) ;
+  text-align: center;
+  color: var(--accent);
+}
+h3{
+  text-align: center;
+  font: var(--headingMedium);
+  color: var(--text);
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.logoContainer > img {
+  width: 50px;
+  border-radius: 10px;
+}
+.signin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.field-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3px;
+}
+
+.field-wrapper label {
+  font: var(--headingMedium);
+  line-height: 100%;
+  color: var(--text);
+}
+#username,
+#password,
+#email,
+#displayname {
+  width: 480px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 16px 10px 16px 10px;
+  border: none;
+}
+label{
+  margin-bottom: 5px;
+}
+input::placeholder {
+  color: var(--secondary);
+  font-weight: var(--light);
+  font: var(--bodySmall);
+}
+main button {
+  transition: all 0.3s ease;
+  border: none;
+  padding: 4px 16px;
+  font: var(--bodyBig);
+  border-radius: 35px;
+  background-color:var(--accent);
+  color: var(--moreContrastText);
+}
+.link-row{
+  text-align: center;
+  font: var(--bodySmall);
+  color: var(--textLessEmphasize);
+}
+.link-row a {
+  transition: all 0.3s ease;
+  font: var(--bodySmall);
+  color: var(--accent);
+  margin-left: 5px;
+  text-decoration: underline;
+}
+.link-row a:hover{
+  color: var(--colorButtonHover);
+}
+input[type="text"], input[type="password"] {
+  font: var(--bodyBig);
+}
+.password-input {
+  position: relative;
+}
+.field-wrapper > p{
+  margin-top: 5px;
+  font: var(--small);
+  color: var(--textLessEmphasize);
+}
+.toggle-eye{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  cursor: pointer;
+  color: var(--secondary);
+}
+main button:hover{
+  background-color: var(--colorButtonHover);
+}
+@media (max-width: 992px) {
+  main{
+    width: 75%;
+  }
+}
+@media (max-width: 767px) {
+  main{
+    width: 100%;
+  }
+  .link-row > p{
+    text-align: left;
+  }
+}
+@media (max-width: 576px){
+  #username,
+  #password,
+  #email,
+  #displayname {
+    width: 300px;
+  }
+}

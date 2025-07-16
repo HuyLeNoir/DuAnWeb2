@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/CartPage.css">
+    <link rel="icon" type="image/png" href="./DuAnWeb/Asset/logoEG.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <button onclick="showNav(this)">
+                <i class="fa-solid fa-bars"></i>  
+        </button>   
+        <nav>
+            <div class="nav_left">
+                <a class="logo" href="home.html">
+                    <img id="logoEG" src="./Asset/logoEG.png" alt="logo">
+                </a>
+                <a href="home.html">Home</a>
+                <a href="store.html"> Store</a>
+                <a href="news.html">News</a>
+                <a href="contact.html"> Contact</a>
+                <a href="aboutus.html"> About Us</a>
+            </div>
+            <div class="nav_right">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="account.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a class="active" href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="checkout-container">
+            <section class="payment-section">
+                <h2>Choose your payment method</h2>
+                <div class="payment-option">
+                    <label>
+                        <input type="radio" name="payment-method" value="credit">
+                        Credit card
+                    </label>
+                    <div class="payment-logos">
+                        <img src="Asset/gpay.webp" alt="GPay">
+                        <img src="Asset/applepay.png" alt="Apple Pay">
+                        <img src="Asset/paypal.png" alt="PayPal">
+                    </div>
+                </div>
+
+                <div class="payment-option">
+                    <label>
+                        <input type="radio" name="payment-method" value="ewallet">
+                        e‑Wallet
+                    </label>
+                    <div class="payment-logos">
+                        <img src="Asset/gpay.webp" alt="GPay">
+                        <img src="Asset/applepay.png" alt="Apple Pay">
+                        <img src="Asset/paypal.png" alt="PayPal">
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-solid fa-circle-info"></i>
+                    You will be redirected to complete your purchase.</p>
+                </div>
+                <p class="note">
+                    You have a withdrawal right during 14 days from the date of purchase.
+                    However our refund policy allows you to ask for a refund during 14 days
+                    if you have 2h or less of playtime.
+                </p>
+
+                <button type="submit" class="butcon">Continue</button>
+            </section>
+
+            <aside class="summary-section">
+                <h2>Summary</h2>
+                <div class="summary-item header">
+                    <span>Title(s)</span><span>Price</span>
+                </div>
+                <div class="summary-item">
+                    <span>ULTRAKILL sale</span><span>120.000₫</span>
+                </div>
+                <div class="summary-item">
+                    <span>ULTRAKILL NOT SALE</span><span>300.000₫</span>
+                </div>
+
+                <div class="summary-item promo">
+                    <label for="promo">Promo code:</label>
+                    <input type="text" id="promo" placeholder="Enter your promocode">
+                </div>
+
+                <div class="summary-item">
+                    <span>Discount:</span><span>0₫</span>
+                </div>
+                <div class="summary-item total">
+                    <span>Total:</span><span>420.000₫</span>
+                </div>
+                <button class="btn-payment">Go to payment</button>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <img id="img-footer" src="./Asset/logoEG.png" alt="">
+        <div class="footer-container">
+            <div>
+                <p>Browse</p>
+                <div class="browse">
+                    <a href="home.html">Home</a>
+                    <a href="store.html">Store</a>
+                    <a href="news.html">News</a>
+                    <a href="aboutus.html">About us</a>
+                    <a href="acount.html">Account</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+            </div>
+            <div>
+                <p>Folow us on</p>
+                <div class="follow">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <p>Contact</p>
+                <div class="contact">
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Khu 2, Đ. 3/2, P. Ninh Kiều, TP. Cần Thơ</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i>EG_Game@eg.com.vn</a>
+                    <a href="#"><i class="fa-solid fa-phone"></i>+84 19000009</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script/Nav.js"></script>
+</body>
+
+</html>

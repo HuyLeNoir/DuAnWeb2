@@ -1,0 +1,190 @@
+main{
+    display: grid;
+    grid-template-areas: "article aside";
+    grid-template-columns: 3fr 1fr;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 10px;
+    flex-grow: 1;
+}
+h1{
+    font: var(--headingBig);
+    font-weight: var(--medium);
+    color: var(--moreContrastText);
+}
+.gamecard3{
+    display: flex;
+    background-color: var(--primary);
+    padding: 16px;
+    gap: 30px;
+}
+.gameInfor {
+    margin-right: auto;
+}
+.gameInfor > p{
+    font: var(--bodyBig);
+    color: var(--text);
+}
+
+.gameInfor > p > span{
+    color: var(--accent);
+}
+.gameImgFrame{
+    max-width: 200px;
+}
+.gameImgFrame > img{
+    aspect-ratio: 3/4;
+    width: 100%;
+}
+
+.price-game{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.price-game > button{
+    cursor: pointer;
+    margin-left: auto;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    font: var(--bodyBig);
+    color: var(--textLessEmphasize);
+    padding: 4px 16px;
+    border: none;
+    background-color: var(--primary);
+}
+.price-game > button:hover{
+    color: var(--moreContrastText);
+    background-color: var(--secondary);
+}
+.Game{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* Khi có giảm giá*/
+.price1{
+    display: flex;
+    flex-direction: row;
+}
+.price1 > .sale{
+    margin-right: 5px;
+    padding: 4px 16px;
+    background-color: var(--accent);
+    border-radius: 5px;
+    color: var(--moreContrastText);
+    font: var(--headingSmall);
+    font-weight: var(--medium);
+    align-content: center;
+}
+.price1 .last-price{
+    font: var(--small);
+    color: var(--textLessEmphasize);
+    text-decoration: line-through;
+}
+.price1 .price{
+    font:var(--bodyBig);
+    color: var(--accent);
+    font-weight: var(--medium);
+}
+/*Khi không có giảm giá */
+.price1.notSale{
+    justify-content: flex-end;
+}
+.price1.notSale .sale{
+    display: none;
+}
+.price1.notSale .last-price{
+    display: none;
+}
+.price1.notSale .price{
+    color: var(--moreContrastText);
+}
+/* Phần sumary*/
+aside{
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 5px;
+    gap: 10px;
+    max-height: 400px;
+}
+.sumary{
+    display: flex;
+    flex-direction: column; 
+    padding: 16px;
+    gap: 5px;
+}
+.sumary>p{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font: var(--bodyBig);
+    color: var(--textLessEmphasize);
+
+}
+.sumary span, .detail span{
+    color: var(--accent);
+}
+.input-promocode{
+    border-radius: 5px;
+    border: none;
+    color: var(--background);
+    font: var(--bodySmall);
+}
+.detail{
+    border-bottom: dashed var(--accent) 2px ;
+    margin-bottom: 10px;
+}
+.detail>p{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font: var(--bodySmall);
+    color: var(--moreContrastText);
+}
+.go-to-payment{
+    margin: auto;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 32px;
+    border-radius: 100px;
+    background-color: var(--accent);
+    font: var(--headingSmall);
+    color: var(--moreContrastText);
+}
+@media (max-width: 992px){
+    main{
+        grid-template-areas: "article" "aside";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+}
+@media (max-width: 768px){
+    .price-game{
+        flex-direction: row-reverse;
+    }
+    .Game{
+        flex-direction: column;
+    }
+    .price-game > button > span{
+        display: none;
+    }
+}
+@media (max-width: 576px){
+    .gamecard3{
+        gap: 10px;
+    }
+    h1{
+        font: var(--headingSmall);
+    }
+    .gameInfor > p{
+        font: var(--small);
+    }
+}

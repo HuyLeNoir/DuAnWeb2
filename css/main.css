@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+    /* color */
+    --background: #151515;
+    --primary: #252525;
+    --secondary: #4E4E4E;
+    --accent: #3DA2FF;
+    --text: #E5E5E5;
+    --textLessEmphasize: #ccc;
+    --moreContrastText: white;
+    --colorButtonHover: #0A8AFF;
+    /* font */
+    --fontFamily: 'Roboto', sans-serif;
+    --regular: 400;
+    --medium: 500;
+    --semiBold: 600;
+    --bold: 700;
+    --light: 300;
+    --titleBig: var(--regular) 3.815rem/1.2 var(--fontFamily);
+    --titleSmall: 3.052rem/1.2 var(--fontFamily);
+    --headingBig: 2.441rem/1.25 var(--fontFamily);
+    --headingMedium: 1.953rem/1.25 var(--fontFamily);
+    --headingSmall: 1.563rem/1.5 var(--fontFamily);
+    --bodyBig: 1.25rem/1.5 var(--fontFamily);
+    --bodySmall: 1rem/1.5 var(--fontFamily);
+    --small: 0.8rem/1.5 var(--fontFamily);
+    --smaller: 0.64rem/1.5 var(--fontFamily);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background-color: var(--background);
+}
+nav{
+    display: flex;
+    height: auto;
+    padding: 0px 16px;
+    background-color: var(--background);
+    justify-content: space-between;
+}
+header > button{
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 32px;
+        display: none;
+}
+#logoEG{
+    height: 72px;
+}
+nav a{
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    cursor: pointer;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    padding: 4px 16px;
+    border-radius: 5px;
+    color: var(--textLessEmphasize);
+    font:var(--headingMedium);
+}
+/* left section */
+.nav_left{
+    display: flex;
+}
+.nav_left > a.logo{
+    padding: 0px;
+}
+/* right section */
+.nav_right{
+    display: flex;
+    padding: 0px 16px;
+}
+.nav_right > i {
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    color: var(--textLessEmphasize);
+    text-align: center;
+    align-content: center;
+    font-size: 32px;
+    padding: 4px 16px;
+}
+/* hover and active */
+nav a:hover:not(.logo), .nav_right > i:hover{
+    color:var(--moreContrastText);
+    background-color: var(--secondary);
+}
+nav a.active:hover{
+    background-color: white;
+    color: var(--background);
+}
+.active{
+    background-color: white;
+    color: var(--background);
+}
+/* footer section*/
+footer{
+    display: flex;
+    width: 100%;
+    background-color: var(--primary);
+    margin-top: 10px;
+}
+#img-footer{
+    height: 200px;
+}
+.follow i{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.footer-container{
+    width: 100%;
+}
+.footer-container > div{
+    margin-bottom: 16px;
+}
+.footer-container p{
+    color: var(--secondary);
+    font: var(--headingSmall);
+}
+.footer-container a{
+    text-align: center;
+    margin-left: 10px;
+    transition: all ease 0.3s;
+    text-decoration: none;
+    color: var(--moreContrastText);
+    font: var(--bodyBig);
+}
+.browse{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-container a:hover{
+    color: var(--accent);
+}
+.contact i{
+    margin-right: 5px;
+}
+.contact a{
+    margin-bottom:5px;
+    display: block;
+    text-align: left;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 80px;
+}
+@media (max-width: 1200px){
+    .nav_right span{
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+    main{
+        padding: 0px 40px;
+    }
+    .logo{
+        display: none;
+    }
+    #img-footer{
+        height: 150px;
+    }
+}
+@media (max-width: 767px) {
+    main{
+        padding: 0px 20px;
+    }
+}
+@media(max-width: 576px){
+    main{
+        padding: 0px;
+    }
+    nav{
+        flex-direction: column;
+        height: 0px;
+        overflow: hidden;
+    }
+    .nav_left{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header > button{
+        display: block;
+    }
+    #img-footer{
+        height: 100px;
+    }
+}

@@ -58,6 +58,7 @@ h3{
   color: var(--text);
 }
 #username,
+#Repassword,
 #password,
 #email,
 #displayname {
@@ -137,6 +138,7 @@ main button:hover{
 @media (max-width: 576px){
   #username,
   #password,
+  #Repassword,
   #email,
   #displayname {
     width: 300px;

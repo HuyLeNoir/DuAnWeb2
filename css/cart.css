@@ -2,7 +2,7 @@ main{
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
-.cartContainer{
+.Container{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -90,27 +90,27 @@ h1{
     font-weight: var(--medium);
 }
 /*Khi không có giảm giá */
-.price1.notSale{
+.price1.noSale{
     justify-content: flex-end;
 }
-.price1.notSale .sale{
-    display: none;
+.price1.noSale .sale{
+    visibility: hidden;
 }
-.price1.notSale .last-price{
-    display: none;
+.price1.noSale .last-price{
+    visibility: hidden;
 }
-.price1.notSale .price{
+.price1.noSale .price{
     color: var(--moreContrastText);
 }
 /* Phần sumary*/
-aside{
+.sumaryContainer{
     background-color: var(--primary);
     display: flex;
     flex-direction: column;
     padding: 16px;
     border-radius: 5px;
     gap: 10px;
-    max-height: 450px;
+    height: 450px;
 }
 .sumary{
     display: flex;

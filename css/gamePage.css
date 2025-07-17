@@ -40,7 +40,7 @@ h4{
 .gameContainer > .gamePicture{
     display: grid;
     grid-template-areas: "image side";
-    grid-template-columns: 1000px 1fr;
+    grid-template-columns: 2fr 1fr;
     width: 100%;
 }
 .gamePicture > img{
@@ -145,26 +145,39 @@ button#right{
     opacity: 0.3;
     width: 100%;
     height: 100%;
-    background-image: url(Asset/ultrakillheader.jpg);
+    background-image: url(../Asset/ultrakillheader.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
 }
-.price > p{
-    color: var(--textLessEmphasize);
-    font: var(--bodyBig);
-}
-.priceContainer{
+
+.Container{
     margin-left: auto;
     background-color: var(--primary);
     padding: 8px;
     border-radius: 5px;
 }
-.priceContainer > div{
+.priceContainer{
     display: flex;
     gap: 5px;
 }
-.priceContainer span{
+.originalPrice{
+    color: var(--textLessEmphasize);
+    font: var(--bodyBig);
+}
+.priceContainer.noSale .saleAmount{
+    display: none;
+}
+.priceContainer.noSale .originalPrice{
+    display: none;
+}
+.priceContainer.noSale .gamePrice{
+    color: var(--text);
+}
+.priceContainer.noSale .price{
+    margin-left: auto;
+}
+.saleAmount{
     padding: 4px 16px;
     font: var(--titleSmall);
     font-weight: var(--medium);
@@ -172,10 +185,10 @@ button#right{
     background-color: var(--accent);
     border-radius: 5px;
 }
-.priceContainer p{
+.Container p{
     text-decoration: line-through;
 }
-.priceContainer button{
+.Container button{
     cursor: pointer;
     width: 100%;
     margin-top: 5px;
@@ -206,11 +219,12 @@ button#right{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 16px;
     justify-content: space-between;
 }
 .ratingContainer > div{
     border-radius: 16px;
-    width: 24.5%;
+    width: 24%;
     padding: 16px;
     background-color: var(--primary);
 }
@@ -224,11 +238,13 @@ button#right{
 }
 .score > span{
     font: var(--titleSmall);
+    font-size: min(3rem, 5vw);
     color: white;
     font-weight: var(--medium);
 }
 .score > span.total{
     font: var(--bodyBig);
+    font-size: min(1.25rem, 5vw);
     font-weight: var(--medium);
     color: black;
 }
@@ -273,4 +289,34 @@ p.reviewer{
 }
 .requirementContainer span.head{
     color: var(--secondary);
+}
+@media (max-width: 992px){
+    .ratingContainer > div{
+        width: 48%;
+    }
+}
+@media (max-width: 768px){
+    .gameContainer > .gamePicture {
+        grid-template-areas: "side" "image";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .requirementContainer{
+        grid-template-areas: "minimum" "recommend";
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .ratingContainer p{
+        font: var(--small);
+    }
+}
+@media (max-width: 576px){
+    .buyGame{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .priceContainer{
+        margin-left: 0;
+    }
+    
 }

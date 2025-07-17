@@ -9,7 +9,6 @@
 }
 .GameCard{
     border-radius: 10px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -45,15 +44,12 @@
     height: 80px;
     font: var(--headingSmall);
     font-weight: var(--medium);
-    font-size: min(4vw, 1.563rem);
     color: var(--text);
     text-align: left;
-    padding: 0;
-    margin: 0px;
-
 }
 .priceGroup > .saleAmount{
     font: var(--bodyBig);
+    font-weight: var(--medium);
     background-color: var(--accent);
     padding: 8px 16px;
     border-radius: 10px;
@@ -83,6 +79,24 @@
 }
 
 /* feature game card here */
+
+/* scrollable */
+.AG_container.Scroll{ 
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+}
+.AG_container.Scroll > .GameCard{
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 250px;
+}
+
+/* notscrollable */
 .FG_container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -267,13 +281,32 @@ h3{
     }
 }
 @media (max-width: 992px) {
-    
+    .allNews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .AG_container.Scroll > .GameCard{
+        width: 200px;
+    }
+    .price > p{
+        font: var(--bodySmall);
+        font-weight: var(--medium);
+    }
+    .content > h1{
+        font: var(--bodyBig);
+        font-weight: var(--medium);
+    }
 }
 @media (max-width: 768px){
-    .FG_container, .allNews{
+    .FG_container{
         grid-template-columns: repeat(2, 1fr);
-    } 
+    }
+    .priceGroup > .saleAmount{
+        padding: 4px 8px;
+    }
+    
 }
 @media (max-width: 576px){
-    
+    .AG_container.Scroll > .GameCard{
+        width: 180px;
+    }
 }

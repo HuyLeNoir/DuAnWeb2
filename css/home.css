@@ -9,6 +9,54 @@ h1{
     width: 100%;
     margin-top: 10px;
 }
+.disableScrollBar{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.disableScrollBar::-webkit-scrollbar {
+    display: none;
+}
+.Navigation{
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+    display: flex;
+    margin-bottom: 10px;
+}
+.Navigation > button{
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 50px;
+    stroke-width: 1px;
+    color: var(--moreContrastText);
+    font-size: 24px;
+    transition: all 0.3s ease;
+    border: none;
+    background-color: var(--background);
+}
+button.deActive, button.deActive:hover{
+    color: var(--primary);
+    background-color: var(--background) !important;
+}
+.Navigation > button:hover{
+    background-color: var(--secondary);
+}
+.barContainer{
+    display: flex;
+    gap: 5px;
+}
+.bar{
+    transition: all 0.3s ease;
+    background-color: var(--primary);
+    border-radius: 5000px;
+    width: 10px;
+    height: 10px;
+}
+.bar.active{
+    background-color: white;
+    width: 30px;
+}
+
 @media (max-width: 992px) {
     
 }

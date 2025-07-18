@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Cart</title>
-    <link rel="icon" type="image/png" href="./Asset/logoEG1.png">
+    <link rel="icon" type="image/png" href="../Asset/logoEG1.png">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/gamePage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-    <header>  
+    <dialog id="cart-Detail">
+        <div class="wrapper">
+            <div class="bar">
+                <i class="fa-solid fa-info"></i>
+                <i onclick="showDialog(false)" id="close" class="fa-solid fa-xmark"></i>
+            </div>
+            <h1>An item was added to your cart</h1>
+            <a href="../cart.html">View My Cart</a>
+        </div>
+    </dialog>
+    <header>
         <nav>
             <div class="nav_left">
                 <a class="logo" href="../home.html">
@@ -44,7 +56,10 @@
                 <div class="Side">
                     <img src="../Asset/ultrakillheader.jpg" alt="header">
                     <div class="content">
-                        <p>ULTRAKILL is a fast-paced ultraviolent retro FPS combining the skill-based style scoring from character action games with unadulterated carnage inspired by the best shooters of the '90s. Rip apart your foes with varied destructive weapons and shower in their blood to regain your health.</p>
+                        <p>ULTRAKILL is a fast-paced ultraviolent retro FPS combining the skill-based style scoring from
+                            character action games with unadulterated carnage inspired by the best shooters of the '90s.
+                            Rip apart your foes with varied destructive weapons and shower in their blood to regain your
+                            health.</p>
                         <table>
                             <tr>
                                 <th>Developer:</th>
@@ -70,9 +85,9 @@
             <h2>Game Gallery</h2>
             <div class="gameGallery">
                 <button id="left"><i class="fa-solid fa-chevron-left"></i></button>
-                <div id="picContainer"class="pictureContainer">
+                <div id="picContainer" class="pictureContainer">
                     <div class="picture">
-                    <img src="../Asset/ultrakillGallery1.jpg" alt="">
+                        <img src="../Asset/ultrakillGallery1.jpg" alt="">
                     </div>
                     <div class="picture">
                         <img src="../Asset/ultrakillGallery2.jpg" alt="">
@@ -109,13 +124,15 @@
                         <h3 class="gamePrice">121.000đ</h3>
                     </div>
                 </div>
-                <button>Add to cart</button>
+                <button onclick="showDialog(true)">Add to cart</button>
             </div>
         </div>
         <div class="aboutGame">
             <h2>About this game</h2>
             <div class="about">
-                <p>ULTRAKILL là một tựa game bắn súng góc nhìn thứ nhất (FPS) tốc độ cao, lấy cảm hứng từ các game cổ điển như DOOM, Quake, và Devil May Cry. Game được phát triển bởi Arsi "Hakita" Patala và phát hành bởi New Blood Interactive.</p>
+                <p>ULTRAKILL là một tựa game bắn súng góc nhìn thứ nhất (FPS) tốc độ cao, lấy cảm hứng từ các game cổ
+                    điển như DOOM, Quake, và Devil May Cry. Game được phát triển bởi Arsi "Hakita" Patala và phát hành
+                    bởi New Blood Interactive.</p>
                 <br>
                 <ul>
                     <li>Gameplay nhanh, dồn dập: di chuyển liên tục, dash, nhảy tường, air combo.</li>
@@ -129,43 +146,47 @@
         <div class="rating">
             <h2>Rating</h2>
             <div class="ratingContainer">
-            <div>
-                <div class="score">
-                    <span>9.2</span>
-                    <span class="total">/10</span>
+                <div>
+                    <div class="score">
+                        <span>9.2</span>
+                        <span class="total">/10</span>
+                    </div>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>ULTRAKILL được đánh giá là “ultrafast FPS lấy cảm hứng từ DOOM/Quake”, tập trung vào lối chơi tốc
+                        độ cao và kỹ năng, với vũ khí đa dạng và hồi máu bằng cách… tắm máu địch!.</p>
+                    <p class="reviewer">Metacretic</p>
                 </div>
-                <i class="fa-solid fa-quote-left"></i>
-                <p>ULTRAKILL được đánh giá là “ultrafast FPS lấy cảm hứng từ DOOM/Quake”, tập trung vào lối chơi tốc độ cao và kỹ năng, với vũ khí đa dạng và hồi máu bằng cách… tắm máu địch!.</p>
-                <p class="reviewer">Metacretic</p>
-            </div>
-            <div>
-                <div class="score">
-                    <span>9.2</span>
-                    <span class="total">/10</span>
+                <div>
+                    <div class="score">
+                        <span>9.2</span>
+                        <span class="total">/10</span>
+                    </div>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>“Even more metal than Doom” – đánh giá ULTRAKILL là một trong những FPS retro mạnh mẽ nhất, với
+                        tốc độ cực nhanh và khả năng hồi máu đặc trưng, tạo cảm giác cực kỳ đã tay</p>
+                    <p class="reviewer">PCGamer</p>
                 </div>
-                <i class="fa-solid fa-quote-left"></i>
-                <p>“Even more metal than Doom” – đánh giá ULTRAKILL là một trong những FPS retro mạnh mẽ nhất, với tốc độ cực nhanh và khả năng hồi máu đặc trưng, tạo cảm giác cực kỳ đã tay</p>
-                <p class="reviewer">PCGamer</p>
-            </div>
-            <div>
-                <div class="score">
-                    <span>9.2</span>
-                    <span class="total">/10</span>
+                <div>
+                    <div class="score">
+                        <span>9.2</span>
+                        <span class="total">/10</span>
+                    </div>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Ultrakill thực sự tuyệt vời, từ phong cách đồ họa đến nhân vật đều tuyệt vời. Trò chơi có thể
+                        khiến bạn trở thành một tay chơi đích thực nhờ lối chơi thỏa mãn. Nhìn chung, Ultrakill rất đáng
+                        để chơi.</p>
+                    <p class="reviewer">IGN</p>
                 </div>
-                <i class="fa-solid fa-quote-left"></i>
-                <p>Ultrakill thực sự tuyệt vời, từ phong cách đồ họa đến nhân vật đều tuyệt vời. Trò chơi có thể khiến bạn trở thành một tay chơi đích thực nhờ lối chơi thỏa mãn. Nhìn chung, Ultrakill rất đáng để chơi.</p>
-                <p class="reviewer">IGN</p>
-            </div>
-            <div>
-                <div class="score">
-                    <span>9.2</span>
-                    <span class="total">/10</span>
+                <div>
+                    <div class="score">
+                        <span>9.2</span>
+                        <span class="total">/10</span>
+                    </div>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Con Game này vui vãi</p>
+                    <p class="reviewer">Markiplier</p>
                 </div>
-                <i class="fa-solid fa-quote-left"></i>
-                <p>Con Game này vui vãi</p>
-                <p class="reviewer">Markiplier</p>
             </div>
-        </div>
         </div>
         <div class="requirement">
             <h2>System requirement</h2>
@@ -271,5 +292,17 @@
         </div>
     </footer>
     <script src="../script/gamePage.js"></script>
+    <script>
+        const dialog = document.getElementById("cart-Detail");
+        const wrapper = document.querySelector(".wrapper");
+        function showDialog(show) {
+            show ? dialog.showModal() : dialog.close();
+        }
+        dialog.onclick = (e) => {
+            if (!wrapper.contains(e.target)) {
+                dialog.close();
+            }
+        }
+    </script>
 </body>
 </html>

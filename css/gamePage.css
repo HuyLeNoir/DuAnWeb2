@@ -290,6 +290,59 @@ p.reviewer{
 .requirementContainer span.head{
     color: var(--secondary);
 }
+
+/* dialog */
+
+dialog{
+    border: none;
+    border-radius: 16px;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    margin: auto;
+    background-color: var(--primary);
+}
+dialog i:not(#close){
+    color: var(--accent);
+    font-size: 32px;
+}
+dialog a{
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font: var(--bodySmall);
+    border-radius: 15px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    color: var(--moreContrastText);
+    background-color: var(--accent);
+}
+dialog :active-view-transition-type:hover{
+    background-color: var(--colorButtonHover);
+}
+.wrapper{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+.bar{
+    display: flex;
+}
+#close{
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: auto;
+    color: var(--secondary);
+}
+#close:hover{
+    color: var(--text);
+}
+dialog h1{
+    font: var(--headingSmall);
+    color: var(--text);
+}
 @media (max-width: 992px){
     .ratingContainer > div{
         width: 48%;

@@ -2,7 +2,7 @@
 .AG_container{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     color: white;
     justify-content: center;
@@ -281,6 +281,9 @@ h3{
     }
 }
 @media (max-width: 992px) {
+    .AG_container{
+        grid-template-columns: repeat(4, 1fr);
+    }
     .allNews {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -297,6 +300,9 @@ h3{
     }
 }
 @media (max-width: 768px){
+    .AG_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
     .FG_container{
         grid-template-columns: repeat(2, 1fr);
     }

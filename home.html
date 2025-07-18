@@ -445,7 +445,7 @@
             const previousButton = document.getElementById("Previous");
             const nextButton = document.getElementById("Next");
             if(currentIndex == 0){
-                previousButton.classList.add("deActive");
+                    previousButton.classList.add("deActive");
             }
             if(currentIndex > 0){
                 previousButton.classList.remove("deActive");
@@ -456,6 +456,24 @@
             if(currentIndex == barAmount-1){
                 nextButton.classList.add("deActive");
             }
+                //EXPERIMENTAL FUNCTION
+            // if(maxCardShow >= gameCardList.length){
+            //     nextButton.classList.add("deActive");
+            //     previousButton.classList.add("deActive");
+            // }else{
+            //     if(currentIndex == 0){
+            //     previousButton.classList.add("deActive");
+            //     }
+            //     if(currentIndex > 0){
+            //         previousButton.classList.remove("deActive");
+            //     }
+            //     if(currentIndex < barAmount-1){
+            //         nextButton.classList.remove("deActive");
+            //     }
+            //     if(currentIndex == barAmount-1){
+            //         nextButton.classList.add("deActive");
+            //     }
+            // }  
         }
     </script>
 </body>

@@ -122,7 +122,7 @@
                         <h3 class="gamePrice">121.000đ</h3>
                     </div>
                 </div>
-                <button onclick="showDialog(true)">Add to cart</button>
+                <button onclick="addToCart('game14')">Add to cart</button>
             </div>
         </div>
         <div class="aboutGame">
@@ -290,17 +290,8 @@
         </div>
     </footer>
     <script src="../script/gamePage.js"></script>
-    <script>
-        const dialog = document.getElementById("cart-Detail");
-        const wrapper = document.querySelector(".wrapper");
-        function showDialog(show) {
-            show ? dialog.showModal() : dialog.close();
-        }
-        dialog.onclick = (e) => {
-            if (!wrapper.contains(e.target)) {
-                dialog.close();
-            }
-        }
-    </script>
+    <script src="../script/popup.js"></script>
+    <script src="../script/addCart.js"></script>
 </body>
+
 </html>

@@ -1,16 +1,25 @@
-main{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
 .Container{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-h1{
+h1{ 
     font: var(--headingBig);
     font-weight: var(--medium);
     color: var(--moreContrastText);
+}
+h2{
+    border-radius: 10px;
+    font: var(--headingSmall);
+    color: var(--text);
+    text-align: center;
+    border: 1px solid var(--secondary);
+    background-color: var(--primary);
+}
+.cartContainer{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
 }
 .gamecard3{
     border-radius: 5px;
@@ -35,6 +44,7 @@ h1{
 }
 .gameImgFrame > img{
     aspect-ratio: 3/4;
+    object-fit: cover;
     width: 100%;
 }
 
@@ -110,7 +120,6 @@ h1{
     padding: 16px;
     border-radius: 5px;
     gap: 10px;
-    height: 450px;
 }
 .sumary{
     display: flex;
@@ -148,7 +157,7 @@ h1{
     color: var(--moreContrastText);
 }
 .go-to-payment{
-    margin: auto;
+    margin: 0px auto;
     text-decoration: none;
     cursor: pointer;
     padding: 8px 32px;
@@ -158,7 +167,7 @@ h1{
     color: var(--moreContrastText);
 }
 @media (max-width: 992px){
-    main{
+    .cartContainer{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
     }

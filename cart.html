@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Cart</title>
     <link rel="icon" type="image/png" href="./Asset/logoEG1.png">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <header>
         <button onclick="showNav(this)">
-                <i class="fa-solid fa-bars"></i>  
-        </button>   
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <nav>
             <div class="nav_left">
                 <a class="logo" href="home.html">
@@ -38,108 +40,49 @@
             </div>
         </nav>
     </header>
-   <main>
-     <div class="Container">
+    <main>
         <h1>Your item(s)</h1>
-        <div class="gamecard3">
-            <div class="gameImgFrame">
-                <img src="./Asset/Ultrakill.jpg" alt="">
-            </div>
-            <div class="Game">
-                <div class="gameInfor">
-                    <h1>ULTRAKILL</h1>
-                    <p>Plaform: <span>PC/Windows</span></p>
-                </div>
-                <div class="price-game">
-                    <button><i class="fa-solid fa-trash"></i> <span>Remove</span></button>
-                    <div class="price1">
-                        <p class="sale">-20%</p>
-                        <div>
-                            <p class="last-price">360.000đ</p>
-                            <p class="price">160.000đ</p>
+        <div class="cartContainer">
+            <div class="Container" id="gameContainer">
+                <h2>Your cart is empty</h2>
+                <!-- <div class="gamecard3">
+                    <div class="gameImgFrame">
+                        <img src="Asset/ultrakill/cover.jpg" alt="">
+                    </div>
+                    <div class="Game">
+                        <div class="gameInfor">
+                            <h1>ULTRAKILL</h1>
+                            <p>Plaform: <span>PC/Windows</span></p>
+                        </div>
+                        <div class="price-game">
+                            <button><i class="fa-solid fa-trash"></i> <span>Remove</span></button>
+                            <div class="price1">
+                                <p class="sale">-20%</p>
+                                <div>
+                                    <p class="last-price">360.000đ</p>
+                                    <p class="price">160.000đ</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>                
+                </div> -->
             </div>
-        </div>
-        <div class="gamecard3">
-            <div class="gameImgFrame">
-                <img src="./Asset/Ultrakill.jpg" alt="">
-            </div>
-            <div class="Game">
-                <div class="gameInfor">
-                    <h1>ULTRAKILL</h1>
-                    <p>Plaform: <span>PC/Windows</span></p>
-                </div>
-                <div class="price-game">
-                    <button><i class="fa-solid fa-trash"></i> <span>Remove</span></button>
-                    <div class="price1 noSale">
-                        <p class="sale">-20%</p>
-                        <div>
-                            <p class="last-price">360.000đ</p>
-                            <p class="price">160.000đ</p>
-                        </div>
+            <div class="sumaryContainer">
+                <h1>Sumary</h1>
+                <div class="sumary">
+                    <p>Game(s) <span>Price</span></p>
+                    <div class="detail">
+                        <p>ULTRAKILL SALE<span>120.000đ</span></p>
+                        <p>ULTRAKILL NOT SALE<span>300.000đ</span></p>
                     </div>
-                </div>                
-            </div>
-        </div>
-        <div class="gamecard3">
-            <div class="gameImgFrame">
-                <img src="./Asset/Ultrakill.jpg" alt="">
-            </div>
-            <div class="Game">
-                <div class="gameInfor">
-                    <h1>ULTRAKILL</h1>
-                    <p>Plaform: <span>PC/Windows</span></p>
+                    <p>Gift code: <span><input class="input-promocode" type="text"
+                                placeholder="Enter your giftcode"></span></span></p>
+                    <p>Discount<span>0đ</span></p>
+                    <p id="total">Total:<span>420.000đ</span></p>
                 </div>
-                <div class="price-game">
-                    <button><i class="fa-solid fa-trash"></i> <span>Remove</span></button>
-                    <div class="price1 noSale">
-                        <p class="sale">-20%</p>
-                        <div>
-                            <p class="last-price">360.000đ</p>
-                            <p class="price">160.000đ</p>
-                        </div>
-                    </div>
-                </div>                
+                <a href="CartPage.html" class="go-to-payment">Go to payment</a>
             </div>
         </div>
-                <div class="gamecard3">
-            <div class="gameImgFrame">
-                <img src="./Asset/Ultrakill.jpg" alt="">
-            </div>
-            <div class="Game">
-                <div class="gameInfor">
-                    <h1>ULTRAKILL</h1>
-                    <p>Plaform: <span>PC/Windows</span></p>
-                </div>
-                <div class="price-game">
-                    <button><i class="fa-solid fa-trash"></i><span>Remove</span></button>
-                    <div class="price1 noSale">
-                        <p class="sale">-20%</p>
-                        <div>
-                            <p class="last-price">360.000đ</p>
-                            <p class="price">160.000đ</p>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-        </div>
-     </div>
-    <div class="sumaryContainer">
-        <h1>Sumary</h1>
-        <div class="sumary">
-            <p>Game(s) <span>Price</span></p>
-            <div class="detail">
-                <p>ULTRAKILL SALE<span>120.000đ</span></p>
-                <p>ULTRAKILL NOT SALE<span>300.000đ</span></p>
-            </div>
-            <p>Gift code: <span><input class="input-promocode" type="text" placeholder="Enter your giftcode"></span></span></p>
-            <p>Discount<span>0đ</span></p>
-            <p>Total:<span>420.000đ</span></p>
-        </div>
-        <a href="CartPage.html" class="go-to-payment">Go to payment</a>
-    </div>
     </main>
 
     <footer>
@@ -175,5 +118,8 @@
         </div>
     </footer>
     <script src="script/Nav.js"></script>
+    <script src="script/gameList.js"></script>
+    <script src="script/cart.js"></script>
 </body>
+
 </html>

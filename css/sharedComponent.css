@@ -74,6 +74,7 @@
     font-weight: var(--medium);
 }
 .price >p.sale{
+    text-align: right;
     text-decoration: none;
     color: var(--accent);
 }

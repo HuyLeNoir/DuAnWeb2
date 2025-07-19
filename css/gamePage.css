@@ -39,6 +39,7 @@ h4{
 }
 .gameContainer > .gamePicture{
     display: grid;
+    gap: 20px;
     grid-template-areas: "image side";
     grid-template-columns: 2fr 1fr;
     width: 100%;
@@ -109,6 +110,9 @@ h4{
     font-size: 3vw;
     color: var(--moreContrastText);
 }
+.gameGallery > button:hover{
+    color: var(--accent);
+}
 button#left{
     left: 5px;
 }
@@ -137,19 +141,16 @@ button#right{
     display: flex;
     align-items: center;
 }
-.buyGame::after{
-    content: "";
+ .bg-img{
     position: absolute;
     top:0;
     left:0;
     opacity: 0.3;
     width: 100%;
     height: 100%;
-    background-image: url(../Asset/ultrakillheader.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     z-index: -1;
-}
+    object-fit: cover;
+ }
 
 .Container{
     margin-left: auto;
@@ -204,6 +205,8 @@ button#right{
 }
 /* about this game */
 .about{
+    display: flex;
+    flex-direction: column;
     background-color: var(--primary);
     padding: 1rem;
     border-radius: 10px;
@@ -273,6 +276,9 @@ p.reviewer{
     gap: 20px;
 }
 .minimum, .recommend{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     border-radius: 10px;
     background-color: var(--primary);
     padding: 16px;

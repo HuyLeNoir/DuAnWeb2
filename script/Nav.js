@@ -1,3 +1,4 @@
+//-------------------------------------------------Navigation------------------------------------------------------------------//
 {
     const nav = document.getElementsByTagName("nav")[0];
     let navOpen = false;

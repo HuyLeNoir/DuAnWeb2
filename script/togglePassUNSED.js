@@ -1,3 +1,4 @@
+//------------------------------------------------------UNSED
 function togglePassword(eye) {
 const passwordInput = document.getElementById("password");
     if(passwordInput.type === "password") {

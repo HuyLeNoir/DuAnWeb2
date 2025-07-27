@@ -494,12 +494,12 @@ document.querySelectorAll("#sort-by-name, #sort-by-price, #sort-by-release").for
   });
 });
 // =====================================================================================
-document.querySelectorAll("#All, #Action, #RPG, #Souls-like, #Open-World, #Dark-Fantasy, #Adventure").forEach((item) => {
+document.querySelectorAll("#All, #Action, #Simulation, #Souls-like, #Open-World, #Dark-Fantasy, #Adventure").forEach((item) => {
   item.addEventListener("click", function () {
     const isAll = this.id === "All";
 
     if (isAll) {
-      document.querySelectorAll("#Action, #RPG, #Souls-like, #Open-World, #Dark-Fantasy, #Adventure").forEach((i) => {
+      document.querySelectorAll("#Action, #Simulation, #Souls-like, #Open-World, #Dark-Fantasy, #Adventure").forEach((i) => {
         i.classList.remove("checked");
         i.querySelector("i")?.remove();
       });
@@ -545,7 +545,9 @@ document.querySelectorAll("#All-cs, #Yes-cs, #No-cs").forEach((item) => {
 
 function filterGames() {
   let filtered = [...games];
-  const selectedGenres = Array.from(document.querySelectorAll("#Action.checked, #RPG.checked, #Souls-like.checked, #Open-World.checked, #Dark-Fantasy.checked, #Adventure.checked")).map((i) => i.id);
+  const selectedGenres = Array.from(document.querySelectorAll("#Action.checked, #Simulation.checked, #Souls-like.checked, #Open-World.checked, #Dark-Fantasy.checked, #Adventure.checked")).map(
+    (i) => i.id
+  );
   if (selectedGenres.length > 0) {
     filtered = filtered.filter((game) => {
       const genres = game.getGenre();
@@ -598,12 +600,6 @@ function validateDisplayName(name) {
   return true;
 }
 
-function validateRepassword(repassword) {
-  const password = document.getElementById("password").value;
-  if (repassword.value !== password) return false;
-  return true;
-}
-
 // Kiểm tra đăng ký
 function registerValidate() {
   if (validateName(document.getElementById("username")) == false) {
@@ -624,8 +620,9 @@ function registerValidate() {
     alert("Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt");
     return false;
   }
+
   if (validateRepassword(document.getElementById("Repassword")) == false) {
-    alert("Mật khẩu nhập lại không khớp!");
+    alert("Mật khẩu nhập lại không hợp lệ!");
     return false;
   }
   return true;

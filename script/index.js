@@ -427,7 +427,7 @@ function renderGames(list) {
   container.innerHTML = "";
 
   list.forEach(function (game) {
-    const disc = Math.round(game.Sale * 100);
+    const disc = game.Sale * 100;
     const discountPrice = game.getPrice().toLocaleString();
     const originalPrice = game.originalPrice.toLocaleString();
 
@@ -435,8 +435,8 @@ function renderGames(list) {
 
     const saleTag = `<h6 class="saleAmount">-${disc}%</h6>`;
     const priceBL = `<div class="price">
-          <p>${discountPrice}₫</p>
-          <p class="sale">${originalPrice}₫</p>
+          <p>${originalPrice}₫</p>
+          <p class="sale">${discountPrice}₫</p>
       </div>`;
 
     const gameHTML = `

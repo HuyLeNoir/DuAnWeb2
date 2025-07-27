@@ -48,83 +48,37 @@
     </header>
 
     <main class="container">
-      <h1>godofwar</h1>
-      <div class="gameContainer">
-        <div class="gamePicture">
-          <img id="image" src="../Asset/godofwar/gallery1.jpg" />
-          <div class="Side">
-            <img src="../Asset/godofwar/header.jpg" alt="header" />
-            <div class="content">
-              <p>
-                Kratos' revenge on the Olympians is long past. Now, Kratos lives in seclusion as an ordinary man in a land where Norse gods and monsters rule. But in this harsh, unforgiving world, he
-                must fight to survive.
-              </p>
-
-              <table>
-                <tr>
-                  <th>Developer:</th>
-                  <td>Santa Monica Studio, Jetpack Interactive</td>
-                </tr>
-                <tr>
-                  <th>Publisher:</th>
-                  <td>PlayStation Publishing LLC</td>
-                </tr>
-                <tr>
-                  <th>Genre:</th>
-                  <td class="genreContainer">
-                    <span>Like Dark Souls</span>
-                    <span>Act</span>
-                    <span>Adventure</span>
-                    <span>Open World</span>
-                  </td>
-                </tr>
-              </table>
-            </div>
+          <h1 data-id="game07" id="gameID">Game Name</h1>
+    <div class="gameContainer">
+      <div class="gamePicture">
+        <img id="image" src="" alt="img" />
+        <div class="Side">
+          <img id="header" src="" alt="header" />
+          <div class="content">
+            <p id="sideDescription"></p>
+            <table id="sideInformation"></table>
           </div>
-        </div>
-        <h2>Game Gallery</h2>
-        <div class="gameGallery">
-          <button id="left"><i class="fa-solid fa-chevron-left"></i></button>
-          <div id="picContainer" class="pictureContainer">
-            <div class="picture">
-              <img src="../Asset/godofwar/gallery1.jpg" alt="" />
-            </div>
-            <div class="picture">
-              <img src="../Asset/godofwar/gallery2.jpg" alt="" />
-            </div>
-            <div class="picture">
-              <img src="../Asset/godofwar/gallery3.jpg" alt="" />
-            </div>
-            <div class="picture">
-              <img src="../Asset/godofwar/gallery4.jpg" alt="" />
-            </div>
-            <div class="picture">
-              <img src="../Asset/godofwar/gallery5.jpg" alt="" />
-            </div>
-            <div class="picture">
-              <img src="../Asset/godofwar/gallery6.jpg" alt="" />
-            </div>
-            <div class="picture">
-              <img src="../Asset/godofwar/gallery7.jpg" alt="" />
-            </div>
-          </div>
-          <button id="right"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
-      <div class="buyGame">
-        <h1>Buy God of War</h1>
-        <img class="bg-img" src="../Asset/godofwar/header.jpg" />
-        <div class="Container">
-          <div class="priceContainer">
-            <span class="saleAmount">-20%</span>
-            <div class="price">
-              <p class="originalPrice">1.159.000₫</p>
-              <h3 class="gamePrice">1.159.000₫</h3>
-            </div>
-          </div>
-          <button onclick="addToCart('game07')">Add to cart</button>
-        </div>
+      <h2>Game Gallery</h2>
+      <div class="gameGallery">
+        <button id="left">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div id="picContainer" class="pictureContainer"></div>
+        <button id="right">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
+    </div>
+    <div class="buyGame">
+      <h1 id="buyName">Buy GameName</h1>
+      <img class="bg-img" src="" />
+      <div class="Container">
+        <div class="priceContainer"></div>
+        <button onclick="addToCart()">Add to cart</button>
+      </div>
+    </div>
       <div class="aboutGame">
         <h2>About this game</h2>
         <div class="about">
@@ -197,77 +151,7 @@
           </div>
         </div>
       </div>
-      <div class="requirement">
-        <h2>System requirement</h2>
-        <div class="requirementContainer">
-          <div class="minimum">
-            <h4>Minimum:</h4>
-            <p>Requires a 64-bit processor and operating system</p>
-            <p>
-              <span class="head">OS:</span>
-              <span>Windows 10</span>
-            </p>
-            <p>
-              <span class="head">Processor:</span>
-              <span>Core i7-6700 or Ryzen 5 1600</span>
-            </p>
-            <p>
-              <span class="head">Memory:</span>
-              <span>12 GB RAM</span>
-            </p>
-            <p>
-              <span class="head">Graphics:</span>
-              <span>GeForce GTX 1060 6GB or Radeon RX 580 8GB or Arc A380</span>
-            </p>
-            <p>
-              <span class="head">DirectX:</span>
-              <span>Version 12</span>
-            </p>
-            <p>
-              <span class="head">Storage:</span>
-              <span> 70 GB available space</span>
-            </p>
-            <p>
-              <span class="head">Additional Notes:</span>
-              <span
-                >SSD required. Attention: In this game you will encounter a variety of visual effects that may provide seizures or loss of consciousness in a minority of people. If you or someone you
-                know experiences any of the above symptoms while playing, stop and seek medical attention immediately.</span
-              >
-            </p>
-          </div>
-          <div class="recommend">
-            <h4>Recommended:</h4>
-            <p>Requires a 64-bit processor and operating system</p>
-            <p>
-              <span class="head">OS:</span>
-              <span>Windows 11</span>
-            </p>
-            <p>
-              <span class="head">Processor:</span>
-              <span>Core i7-12700 or Ryzen 7 7800X3D</span>
-            </p>
-            <p>
-              <span class="head">Memory:</span>
-              <span>16 GB RAM</span>
-            </p>
-            <p>
-              <span class="head">Graphics:</span>
-              <span>GeForce RTX 2060 SUPER or Radeon RX 5700 XT or Arc A770</span>
-            </p>
-            <p>
-              <span class="head">DirectX:</span>
-              <span>Version 12</span>
-            </p>
-            <p>
-              <span class="head">Storage:</span>
-              <span>70 GB available space</span>
-            </p>
-            <p>
-              <span class="head">Additional Notes:</span>
-              <span> SSD required.</span>
-            </p>
-          </div>
-        </div>
+      <div class="requirements">
       </div>
     </main>
 
@@ -303,8 +187,8 @@
         </div>
       </div>
     </footer>
+    <script src="../script/gameList.js"></script>
     <script src="../script/gamePage.js"></script>
     <script src="../script/popup.js"></script>
-    <script src="../script/addCart.js"></script>
   </body>
 </html>

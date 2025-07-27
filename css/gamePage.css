@@ -134,6 +134,10 @@ button#right{
     width: 100%;
     aspect-ratio: 16/9;
 }
+.picture > img.Selected{
+    transition: all ease 0.1s;
+    border: 3px solid white;
+}
 /* buy game */
 .buyGame{
     position: relative;

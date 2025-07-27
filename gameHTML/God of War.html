@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>God of War on EGStore</title>
-    <link rel="icon" type="image/png" href="../Asset/logoEG1.png" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/gamePage.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
 
-  <body>
-    <dialog id="cart-Detail">
-      <div class="wrapper">
-        <div class="bar">
-          <i class="fa-solid fa-info"></i>
-          <i onclick="showDialog(false)" id="close" class="fa-solid fa-xmark"></i>
-        </div>
-        <h1>An item was added to your cart</h1>
-        <a href="../cart.html">View My Cart</a>
+<head>
+  <meta charset="UTF-8" />
+  <title>God of War on EGStore</title>
+  <link rel="icon" type="image/png" href="../Asset/logoEG1.png" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/gamePage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <dialog id="cart-Detail">
+    <div class="wrapper">
+      <div class="bar">
+        <i class="fa-solid fa-info"></i>
+        <i onclick="showDialog(false)" id="close" class="fa-solid fa-xmark"></i>
       </div>
-    </dialog>
-    <header>
-      <nav>
-        <div class="nav_left">
-          <a class="logo" href="../home.html">
-            <img id="logoEG" src="../Asset/logoEG.png" alt="logo" />
-          </a>
-          <a href="../home.html">Home</a>
-          <a href="../store.html"> Store</a>
-          <a href="../news.html">News</a>
-          <a href="../contact.html"> Contact</a>
-          <a href="../aboutus.html"> About Us</a>
-        </div>
-        <div class="nav_right">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <a href="../account.html">
-            <i class="fa-regular fa-user"></i>
-            <span>Account</span>
-          </a>
-          <a href="../cart.html">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>Cart</span>
-          </a>
-        </div>
-      </nav>
-    </header>
+      <h1>An item was added to your cart</h1>
+      <a href="../cart.html">View My Cart</a>
+    </div>
+  </dialog>
+  <header>
+    <nav>
+      <div class="nav_left">
+        <a class="logo" href="../home.html">
+          <img id="logoEG" src="../Asset/logoEG.png" alt="logo" />
+        </a>
+        <a href="../home.html">Home</a>
+        <a href="../store.html"> Store</a>
+        <a href="../news.html">News</a>
+        <a href="../contact.html"> Contact</a>
+        <a href="../aboutus.html"> About Us</a>
+      </div>
+      <div class="nav_right">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <a href="../account.html">
+          <i class="fa-regular fa-user"></i>
+          <span>Account</span>
+        </a>
+        <a href="../cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-    <main class="container">
-          <h1 data-id="game07" id="gameID">Game Name</h1>
+  <main class="container">
+    <h1 data-id="game07" id="gameID">Game Name</h1>
     <div class="gameContainer">
       <div class="gamePicture">
         <img id="image" src="" alt="img" />
@@ -79,116 +80,126 @@
         <button onclick="addToCart()">Add to cart</button>
       </div>
     </div>
-      <div class="aboutGame">
-        <h2>About this game</h2>
-        <div class="about">
+    <div class="aboutGame">
+      <h2>About this game</h2>
+      <div class="about">
+        <p>
+          Kratos' revenge on the Olympians is long past. Now, Kratos lives in seclusion as a common man in a land where
+          Norse gods and monsters rule. But in this harsh, unforgiving world, he must
+          fight to survive… and teach his son the same.
+        </p>
+        <br />
+        <p>
+          Kratos is once again a father. As the mentor and protector of Atreus, his son is eager to prove himself and
+          earn his respect, Kratos must control his natural rage as he ventures into a
+          dangerous world alongside his son.
+        </p>
+        <br />
+        <p>
+          From the towering marbles and pillars of Mount Olympus to the barren forests, mountains, and caves of
+          pre-Viking Norse lore, this is a brand new realm filled with unique creatures,
+          monsters, and gods. Plunge into
+        </p>
+        <br />
+        <p>
+          With an over-the-shoulder camera that puts players closer to the action than ever before, God of War™ combat
+          reflects the true form of the Norse creatures Kratos will face: massive,
+          ferocious, and brutal. New primary weapons and new abilities retain the hallmarks of the God of War series,
+          while delivering a perspective on conflict that breaks new ground in the genre.
+        </p>
+        <br />
+      </div>
+    </div>
+    <div class="rating">
+      <h2>Rating</h2>
+      <div class="ratingContainer">
+        <div>
+          <div class="score">
+            <span>9.4</span>
+            <span class="total">/10</span>
+          </div>
+          <i class="fa-solid fa-quote-left"></i>
           <p>
-            Kratos' revenge on the Olympians is long past. Now, Kratos lives in seclusion as a common man in a land where Norse gods and monsters rule. But in this harsh, unforgiving world, he must
-            fight to survive… and teach his son the same.
+            God of War Ragnarök straight blows up your mind. It is a way better game than whatever you might imagine and
+            it is definitely the best game in the whole franchise. It actually does it
+            all: its narrative, story-wise, the characters or gameplay, and of course the visuals; it simply is
+            outstanding. The game lasts for about 40 hours and provides one surprise after
+            another, it just does not make any sense at all.
           </p>
-          <br />
+          <p class="reviewer">Metacretic</p>
+        </div>
+        <div>
+          <div class="score">
+            <span>9.0</span>
+            <span class="total">/10</span>
+          </div>
+          <i class="fa-solid fa-quote-left"></i>
+          <p>The best game on PS4 is now one of the best games on PC.</p>
+          <p class="reviewer">PCGamer</p>
+        </div>
+        <div>
+          <div class="score">
+            <span>10</span>
+            <span class="total">/10</span>
+          </div>
+          <i class="fa-solid fa-quote-left"></i>
+          <p>God of Wars outstanding characters, world, and combat come together to form an unforgettable adventure.</p>
+          <p class="reviewer">IGN</p>
+        </div>
+        <div>
+          <div class="score">
+            <span>10</span>
+            <span class="total">/10</span>
+          </div>
+          <i class="fa-solid fa-quote-left"></i>
           <p>
-            Kratos is once again a father. As the mentor and protector of Atreus, his son is eager to prove himself and earn his respect, Kratos must control his natural rage as he ventures into a
-            dangerous world alongside his son.
+            Decided to play this game in the free time I had when I got my Spider-Man PS5 in August despite Spider-Man 2
+            not releasing until October. One of the best decisions I ever made. BANGER
           </p>
-          <br />
-          <p>
-            From the towering marbles and pillars of Mount Olympus to the barren forests, mountains, and caves of pre-Viking Norse lore, this is a brand new realm filled with unique creatures,
-            monsters, and gods. Plunge into
-          </p>
-          <br />
-          <p>
-            With an over-the-shoulder camera that puts players closer to the action than ever before, God of War™ combat reflects the true form of the Norse creatures Kratos will face: massive,
-            ferocious, and brutal. New primary weapons and new abilities retain the hallmarks of the God of War series, while delivering a perspective on conflict that breaks new ground in the genre.
-          </p>
-          <br />
+          <p class="reviewer">Users</p>
         </div>
       </div>
-      <div class="rating">
-        <h2>Rating</h2>
-        <div class="ratingContainer">
-          <div>
-            <div class="score">
-              <span>9.4</span>
-              <span class="total">/10</span>
-            </div>
-            <i class="fa-solid fa-quote-left"></i>
-            <p>
-              God of War Ragnarök straight blows up your mind. It is a way better game than whatever you might imagine and it is definitely the best game in the whole franchise. It actually does it
-              all: its narrative, story-wise, the characters or gameplay, and of course the visuals; it simply is outstanding. The game lasts for about 40 hours and provides one surprise after
-              another, it just does not make any sense at all.
-            </p>
-            <p class="reviewer">Metacretic</p>
-          </div>
-          <div>
-            <div class="score">
-              <span>9.0</span>
-              <span class="total">/10</span>
-            </div>
-            <i class="fa-solid fa-quote-left"></i>
-            <p>The best game on PS4 is now one of the best games on PC.</p>
-            <p class="reviewer">PCGamer</p>
-          </div>
-          <div>
-            <div class="score">
-              <span>10</span>
-              <span class="total">/10</span>
-            </div>
-            <i class="fa-solid fa-quote-left"></i>
-            <p>God of Wars outstanding characters, world, and combat come together to form an unforgettable adventure.</p>
-            <p class="reviewer">IGN</p>
-          </div>
-          <div>
-            <div class="score">
-              <span>10</span>
-              <span class="total">/10</span>
-            </div>
-            <i class="fa-solid fa-quote-left"></i>
-            <p>
-              Decided to play this game in the free time I had when I got my Spider-Man PS5 in August despite Spider-Man 2 not releasing until October. One of the best decisions I ever made. BANGER
-            </p>
-            <p class="reviewer">Users</p>
-          </div>
-        </div>
-      </div>
-      <div class="requirements">
-      </div>
-    </main>
+    </div>
+    <div class="requirements">
+    </div>
+  </main>
 
-    <footer>
-      <img id="img-footer" src="../Asset/logoEG.png" alt="" />
-      <div class="footer-container">
-        <div>
-          <p>Browse</p>
-          <div class="browse">
-            <a href="../home.html">Home</a>
-            <a href="../store.html">Store</a>
-            <a href="../news.html">News</a>
-            <a href="../aboutus.html">About us</a>
-            <a href="../acount.html">Account</a>
-            <a href="../cart.html">Cart</a>
-          </div>
-        </div>
-        <div>
-          <p>Folow us on</p>
-          <div class="follow">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </div>
-        </div>
-        <div>
-          <p>Contact</p>
-          <div class="contact">
-            <a href="#"><i class="fas fa-map-marker-alt"></i>Khu 2, Đ. 3/2, P. Ninh Kiều, TP. Cần Thơ</a>
-            <a href="#"><i class="fa-solid fa-envelope"></i>EG_Game@eg.com.vn</a>
-            <a href="#"><i class="fa-solid fa-phone"></i>+84 19000009</a>
-          </div>
+  <footer>
+    <img id="img-footer" src="../Asset/logoEG.png" alt="" />
+    <div class="footer-container">
+      <div>
+        <p>Browse</p>
+        <div class="browse">
+          <a href="../home.html">Home</a>
+          <a href="../store.html">Store</a>
+          <a href="../news.html">News</a>
+          <a href="../aboutus.html">About us</a>
+          <a href="../acount.html">Account</a>
+          <a href="../cart.html">Cart</a>
         </div>
       </div>
-    </footer>
-    <script src="../script/gameList.js"></script>
-    <script src="../script/gamePage.js"></script>
-    <script src="../script/popup.js"></script>
-  </body>
+      <div>
+        <p>Folow us on</p>
+        <div class="follow">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div>
+        <p>Contact</p>
+        <div class="contact">
+          <a href="#"><i class="fas fa-map-marker-alt"></i>Khu 2, Đ. 3/2, P. Ninh Kiều, TP. Cần Thơ</a>
+          <a href="#"><i class="fa-solid fa-envelope"></i>EG_Game@eg.com.vn</a>
+          <a href="#"><i class="fa-solid fa-phone"></i>+84 19000009</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../script/index.js"></script>
+  <script>
+    loadGame();
+  </script>
+</body>
+
 </html>

@@ -24,6 +24,7 @@ h1{
     margin-bottom: 10px;
 }
 .Navigation > button{
+    cursor: pointer;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     width: 50px;
@@ -35,6 +36,7 @@ h1{
     background-color: var(--background);
 }
 button.deActive, button.deActive:hover{
+    cursor: default;
     color: var(--primary);
     background-color: var(--background) !important;
 }

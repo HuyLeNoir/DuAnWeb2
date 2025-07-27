@@ -77,6 +77,7 @@ input::placeholder {
   font: var(--bodySmall);
 }
 main button {
+  cursor: pointer;
   transition: all 0.3s ease;
   border: none;
   padding: 4px 16px;

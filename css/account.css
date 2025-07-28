@@ -123,6 +123,12 @@ input[type="text"], input[type="password"] {
 main button:hover{
   background-color: var(--colorButtonHover);
 }
+
+#error{
+  width: 100%;
+  color: hsl(0, 100%, 40%);
+}
+
 @media (max-width: 992px) {
   main{
     width: 75%;

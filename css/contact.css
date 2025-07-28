@@ -7,6 +7,14 @@ h2{
     color: var(--moreContrastText);
     font: var(--headingMedium)
 }
+h3{
+    font: var(--bodySmall);
+    text-align: center;
+}
+#error{
+  width: 100%;
+  color: hsl(0, 100%, 40%);
+}
 p{
     font: var(--bodyBig);
     color: var(--moreContrastText);

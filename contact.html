@@ -1,162 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Contact</title>
-    <link rel="icon" type="image/png" href="./Asset/logoEG1.png">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <header> 
-        <button onclick="showNav(this)">
-            <i class="fa-solid fa-bars"></i>  
-        </button>
-        <nav>
-            <div class="nav_left">
-                <a class="logo" href="home.html">
-                    <img id="logoEG" src="./Asset/logoEG.png" alt="logo">
-                </a>
-                <a href="home.html">Home</a>
-                <a href="store.html"> Store</a>
-                <a href="news.html">News</a>
-                <a class="active" href="contact.html"> Contact</a>
-                <a href="aboutus.html"> About Us</a>
-            </div>
-            <div class="nav_right">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <a href="account.html">
-                    <i class="fa-regular fa-user"></i>
-                    <span>Account</span>
-                </a>
-                <a href="cart.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span>Cart</span>
-                </a>
-            </div>
-        </nav>
+    <link rel="icon" type="image/png" href="./Asset/logoEG1.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <button onclick="showNav(this)">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav>
+        <div class="nav_left">
+          <a class="logo" href="home.html">
+            <img id="logoEG" src="./Asset/logoEG.png" alt="logo" />
+          </a>
+          <a href="home.html">Home</a>
+          <a href="store.html"> Store</a>
+          <a href="news.html">News</a>
+          <a class="active" href="contact.html"> Contact</a>
+          <a href="aboutus.html"> About Us</a>
+        </div>
+        <div class="nav_right">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <a href="account.html">
+            <i class="fa-regular fa-user"></i>
+            <span>Account</span>
+          </a>
+          <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Cart</span>
+          </a>
+        </div>
+      </nav>
     </header>
     <main class="contact">
-        <h1>Contact us</h1>
-        <div class="customercare">
-            <h2>Customer care</h2>
-            <p><span>Hotline:</span> 190001509</p>
-            <p><span>Email:</span> EG-CustomCare@gmail.com</p>
+      <h1>Contact us</h1>
+      <div class="customercare">
+        <h2>Customer care</h2>
+        <p><span>Hotline:</span> 190001509</p>
+        <p><span>Email:</span> EG-CustomCare@gmail.com</p>
+      </div>
+      <div class="media">
+        <h2>Media</h2>
+        <p><span>Email:</span> EG-Contact@gmail.com</p>
+      </div>
+      <div class="office">
+        <h2>Office</h2>
+        <p class="inline">
+          <span>Location: </span>
+          Can Tho University Area II, 3/2 Street, Ninh Kieu Ward, Can Tho City
+          <a class="link" href="https://maps.app.goo.gl/nypk3rwPdwCHwEX46"><i class="fa-solid fa-location-dot"></i></a>
+        </p>
+      </div>
+      <h2>Follow us on social</h2>
+      <div class="Social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+      <form class="report-issue" action="xuly.php" method="post" onsubmit="return contactValidate()">
+        <h2>Report issue</h2>
+        <h3 id="error"></h3>
+        <div class="input-report-issue">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" />
+          <label for="email">Email<span>*</span></label>
+          <input type="email" id="email" placeholder="Your email" />
+          <label>Topic<span>*</span></label>
+          <div class="select-menu">
+            <div class="select-bt">
+              <span class="bt-text">--Please choice an option--</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul class="options">
+              <div>
+                <li class="option">
+                  <span class="option-text">--Please choice an option--</span>
+                  <i class="fa-solid fa-check"></i>
+                </li>
+                <li class="option">
+                  <span class="option-text">About purchasing </span>
+                  <i class="fa-solid fa-check"></i>
+                </li>
+                <li class="option">
+                  <span class="option-text">My account</span>
+                  <i class="fa-solid fa-check"></i>
+                </li>
+                <li class="option">
+                  <span class="option-text">Tranding and gifting</span>
+                  <i class="fa-solid fa-check"></i>
+                </li>
+                <li class="option">
+                  <span class="option-text">Marketplace</span>
+                  <i class="fa-solid fa-check"></i>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <label for="description">Description</label>
+          <textarea id="description" placeholder="Describe your issue or feedback here..."></textarea>
+          <button class="send">Send</button>
         </div>
-        <div class="media">
-            <h2>Media</h2>
-            <p><span>Email:</span> EG-Contact@gmail.com</p>
+      </form>
+    </main>
+    <footer>
+      <img id="img-footer" src="./Asset/logoEG.png" alt="" />
+      <div class="footer-container">
+        <div>
+          <p>Browse</p>
+          <div class="browse">
+            <a href="home.html">Home</a>
+            <a href="store.html">Store</a>
+            <a href="news.html">News</a>
+            <a href="aboutus.html">About us</a>
+            <a href="acount.html">Account</a>
+            <a href="cart.html">Cart</a>
+          </div>
         </div>
-        <div class="office">
-            <h2>Office</h2>
-            <p class="inline">
-                <span>Location: </span>
-                 Can Tho University Area II, 3/2 Street, Ninh Kieu Ward, Can Tho City 
-                <a class="link" href="https://maps.app.goo.gl/nypk3rwPdwCHwEX46"><i class="fa-solid fa-location-dot"></i></a></p>
-        </div>
-        <h2>Follow us on social</h2>
-        <div class="Social">
+        <div>
+          <p>Folow us on</p>
+          <div class="follow">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
         </div>
-        <form class="report-issue">
-            <h2>Report issue</h2>
-            <div class="input-report-issue">
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Your name" >
-                <label for="email">Email<span>*</span></label>
-                <input type="email" id="email" placeholder="Your email">
-                <label>Topic<span>*</span></label>
-                <div class="select-menu">
-                    <div class="select-bt">
-                        <span class="bt-text">--Please choice an option--</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <ul class="options">
-                        <div>
-                            <li class="option">
-                                <span class="option-text">--Please choice an option--</span> 
-                                <i class="fa-solid fa-check"></i>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">AAAAaaaaaaaaa </span>
-                                <i class="fa-solid fa-check"></i>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">BBBBBbbbbbbb</span>
-                                <i class="fa-solid fa-check"></i>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">CCCCCCcccc</span>
-                                <i class="fa-solid fa-check"></i>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">DDdddddddd</span>
-                                <i class="fa-solid fa-check"></i>
-                            </li>
-                        </div>
-                    </ul>
-                </div>
-                <label for="description">Description</label>
-                <textarea id="description" placeholder="Describe your issue or feedback here..."></textarea>
-                <button class="send">Send</button>
-            </div>
-        </form>
-
-    </main>
-    <footer>
-        <img id="img-footer" src="./Asset/logoEG.png" alt="">
-        <div class="footer-container">
-            <div>
-                <p>Browse</p>
-                <div class="browse">
-                    <a href="home.html">Home</a>
-                    <a href="store.html">Store</a>
-                    <a href="news.html">News</a>
-                    <a href="aboutus.html">About us</a>
-                    <a href="acount.html">Account</a>
-                    <a href="cart.html">Cart</a>
-                </div>
-            </div>
-            <div>
-                <p>Folow us on</p>
-                <div class="follow">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-            </div>
-            <div>
-                <p>Contact</p>
-                <div class="contact">
-                    <a href="#"><i class="fas fa-map-marker-alt"></i>Khu 2, Đ. 3/2, P. Ninh Kiều, TP. Cần Thơ</a>
-                    <a href="#"><i class="fa-solid fa-envelope"></i>EG_Game@eg.com.vn</a>
-                    <a href="#"><i class="fa-solid fa-phone"></i>+84 19000009</a>
-                </div>
-            </div>
+        <div>
+          <p>Contact</p>
+          <div class="contact">
+            <a href="#"><i class="fas fa-map-marker-alt"></i>Khu 2, Đ. 3/2, P. Ninh Kiều, TP. Cần Thơ</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i>EG_Game@eg.com.vn</a>
+            <a href="#"><i class="fa-solid fa-phone"></i>+84 19000009</a>
+          </div>
         </div>
+      </div>
     </footer>
     <script>
-       const optionMenu = document.querySelector(".options");
-       const select_bt = document.querySelector(".select-bt");
-       const options = document.querySelectorAll(".option");
-       const bt_text = document.querySelector(".bt-text");
-        select_bt.addEventListener("click", function(){ 
-            optionMenu.classList.contains("display") ? optionMenu.classList.remove("display") : optionMenu.classList.add("display");
+      const optionMenu = document.querySelector(".options");
+      const select_bt = document.querySelector(".select-bt");
+      const options = document.querySelectorAll(".option");
+      const bt_text = document.querySelector(".bt-text");
+      select_bt.addEventListener("click", function () {
+        optionMenu.classList.contains("display") ? optionMenu.classList.remove("display") : optionMenu.classList.add("display");
+      });
+      for (let i = 1; i < options.length; i++) {
+        options[i].addEventListener("click", function () {
+          for (let j = 0; j < options.length; j++) {
+            options[j].classList.remove("selected");
+          }
+          options[i].classList.toggle("selected");
+          bt_text.innerText = options[i].getElementsByClassName("option-text")[0].innerText;
+          optionMenu.classList.remove("display");
         });
-        for(let i=1;i<options.length;i++){
-            options[i].addEventListener("click", function(){
-               for(let j=0;j<options.length;j++){
-                options[j].classList.remove("selected");
-               }
-               options[i].classList.toggle("selected");
-               bt_text.innerText = options[i].getElementsByClassName("option-text")[0].innerText;
-               optionMenu.classList.remove("display");
-            });
-        }
+      }
     </script>
-</body>
+    <script src="script/index.js"></script>
+  </body>
 </html>

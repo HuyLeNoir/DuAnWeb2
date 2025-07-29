@@ -7,6 +7,7 @@ let currentIndex = 0;
 let maxCardShow;
 let barAmount;
 let total = 0;
+let currentNewsAmount = 0;
 const gameList = {
     //gameList kieu object
     game01: {
@@ -883,6 +884,120 @@ const gameList = {
     },
 };
 
+const newsList = {
+    news1: {
+        img: "Asset/News/news1.jpg",
+        name: "Forza Horizon 5",
+        title: "This Week’s Backstage Vote Features Extreme Speed for All Ages",
+        content:
+            "The Horizon Backstage goes extreme! This week’s pairs feature a scaled-up version of a famous Hot Wheels car and a retro racer looking for a new time to shine.",
+    },
+    news2: {
+        img: "Asset/News/news2.jpg",
+        name: "Team Fortress 2",
+        title: "Mann vs. Machine Maps Needed!",
+        content:
+            "Thirteen years ago, we launched Mann vs. Machine, a chilling cautionary tale where an artificial consciousness tried to take all our jobs. You didn't know it back then, but that was actually a",
+    },
+    news3: {
+        img: "Asset/News/news3.jpg",
+        name: "Hades II",
+        title: "Spread Fear in The Unseen Update",
+        content:
+            "Our third Major Update for Hades II is finally here, focused on expanding core combat, Guardian encounters, and character relationships, with lots of new visual flair!",
+    },
+    news4: {
+        img: "Asset/News/news4.jpg",
+        name: "Apex Legends™",
+        title: "Latest Apex Legends Matchmaking Update: 2025/07/28",
+        content:
+            "Heads up, legends: at 11 am PT, we'll be starting a matchmaking test in Apex Legends that restricts Masters and Predators to be matched with Diamond 1 and above.",
+    },
+    news5: {
+        img: "Asset/News/news5.jpg",
+        name: "Rust",
+        title: "COMMUNITY UPDATE 266",
+        content:
+            "Global Warfare is back! Next Home-Brew announcement, Rust art, parasites, giant recyclers, and more!",
+    },
+    news6: {
+        img: "Asset/News/news6.jpg",
+        name: "ELDEN RING NIGHTREIGN",
+        title: "ELDEN RING NIGHTREIGN - A new Everdark cycle shall begin",
+        content:
+            "On July 31, 2025, a new Everdark cycle shall begin; the enhanced Nightlords Tricephalos, Augur, Equilibrious Beast and Fissure in the Fog will soon unleash their darkest powers upon Limveld.",
+    },
+    news7: {
+        img: "Asset/News/news7.jpg",
+        name: "Palworld",
+        title: "Palworld v0.6.0: Tides of Terraria has been released!",
+        content:
+            "▼Terraria Collab! ・Terraria Dungeon ⤷ A unique dungeon featuring enemies from Terraria has been added! Collect materials in the dungeon to create equipment from the world of Terraria!",
+    },
+    news8: {
+        img: "Asset/News/news8.jpg",
+        name: "Umasume",
+        title: "New Trainees and Support Cards!",
+        content:
+            "In the scout spotlight are 3-star trainees Tokai Teio and Mejiro McQueen, now sporting new racewear! SSR Support Cards featuring Kitasan Black and Satono Diamond also make their appearance as a new story event begins: Brand-New Friend! Collect event points to earn an exclusive Support Card, title, and more!",
+    },
+    news9: {
+        img: "Asset/News/news9.jpg",
+        name: "Cyberpunk: 2077",
+        title: "Update 2.3 Patch Notes",
+        content:
+            "Experience Night City in a whole new way — this patch introduces 4 new vehicles, the AutoDrive feature, self-driving Delamain cabs and more! It also contains updates for CrystalCoat™ and Photo Mode, as well as support for AMD FSR 3.1 Frame Generation, Intel XeSS 2.0 and HDR10+ Gaming, among others.",
+    },
+    news10: {
+        img: "Asset/News/news10.jpg",
+        name: "Kingdom Come: II",
+        title: "Explore Kingdom Come: Deliverance II - here's your ultimate guide!",
+        content:
+            "Embark on a journey through the tumultuous world of Kingdom Come: Deliverance II with our specially curated guide in collaboration with IGN.",
+    },
+    news11: {
+        img: "Asset/News/news11.jpg",
+        name: "CS2",
+        title: "Season Two: Episode One",
+        content:
+            "It's time to start working toward your Season Three Medal. As before, the color of your medal will correspond to the highest CS Rating achieved during the season, and the bars will reflect your total wins, with one bar for every 25 (up to five bars). To be eligible for a medal, you'll need an account in good standing, 25 Premier match wins, and an active CSR at the end of the season.",
+    },
+    news12: {
+        img: "Asset/News/news12.jpg",
+        name: "Naraka: Bladepoint",
+        title: "NARAKA: BLADEPOINT Update – June 18th, 2025",
+        content:
+            "The servers of NARAKA: BLADEPOINT will be suspended for maintenance from Jul. 8th, 2025 23:00 (UTC) to Jul. 9th, 2025 04:00 (UTC). We suggest you log out in advance and enter the game again after maintenance is complete.",
+    },
+    news13: {
+        img: "Asset/News/news13.jpg",
+        name: "Dead by Daylight",
+        title: "9.1.0 | PTB Patch Notes",
+        content:
+            "Due to known technical issues, Michonne will not be playable in the PTB. However, her three unique Perks are available to test. Players will still be able to see her in the Lobby and in the Store, but will not be able to select her to play in a Trial. These issues will be resolved and Michonne will be fully-playable when version 9.1.0 update releases on July 29.",
+    },
+    news14: {
+        img: "Asset/News/news14.jpg",
+        name: "F1®2025",
+        title: "APXGP Team Icons",
+        content:
+            "Experience the thrill of F1® THE MOVIE with APXGP in My Team or Driver Career mode, only when you buy or upgrade to the Iconic Edition by July 11!",
+    },
+    news15: {
+        img: "Asset/News/news15.jpg",
+        name: "HI IV",
+        title: "Dev Corner | Faction Dynamics Part 2",
+        content:
+            "Welcome to another Developer Corner. Let’s start with a reminder, or clarification, so you have a better idea of what kind of feedback we’re looking for.",
+    },
+    news16: {
+        img: "Asset/News/news16.jpg",
+        name: "Ready or Not",
+        title: "VOID Interactive Clarification on Content Changes",
+        content:
+            "We recently shared that Ready or Not’s PC version underwent minor content changes to support stability and align with policies enforced by global platforms and age rating bodies. These adjustments were made to ensure a smooth global launch across platforms — while fully preserving the game’s tone, themes, and intensity.",
+    },
+};
 //-------------------------------------------------FUNCTION------------------------------------------------------------------//
 function loadDropdown() {
     const buttonList = document.querySelectorAll(".sort-click");
@@ -909,6 +1024,7 @@ function loadDropdown() {
     });
 }
 function loadNews() {
+    const loadMore = document.getElementById("loadMore");
     const slides = document.querySelector(".news-container");
     let slideIndex = 0;
     const dotList = document.querySelectorAll(".dot");
@@ -933,7 +1049,41 @@ function loadNews() {
         slideIndex = (slideIndex + 1) % dotList.length;
         goTo(slideIndex);
     }, 5000);
+    function loadNigga(current, step){
+        if(currentNewsAmount + step > Object.keys(newsList).length){
+            step = Object.keys(newsList).length - currentNewsAmount;
+            console.log(step);
+        }
+        const newsContainer = document.querySelector(".allNews");
+        for (let i = current+1; i <= current+step; i++) {
+            const news = newsList["news" + i]; //lay news hien tai
+            newsContainer.innerHTML += `<div class="newsCard">
+                <div class="imgFrame">
+                    <img src="Asset/News/news${i}.jpg">
+                </div>
+                <div class="newsCardContent">
+                    <div class="header">
+                        <span class="topic">Event</span>
+                        <span class="game-name">${news.name}</span>
+                        <span class="time">3 days ago</span>
+                    </div>
+                    <h4>${news.title}</h4>
+                    <p>${news.content}</p>
+                </div>
+            </div>`;
+        }
+        currentNewsAmount += step;
+        if(currentNewsAmount >= Object.keys(newsList).length){
+            loadMore.style.display = "none";
+        }
+        
 }
+    loadNigga(0, 8); //ban dau co 0 news, load 8 news
+    loadMore.onclick = () => {
+    loadNigga(currentNewsAmount, 4);
+}
+}
+
 function next(button) {
     window.location.href = "recovery1.html";
 }

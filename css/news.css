@@ -15,6 +15,21 @@ button.active{
     width: 26px;
     border-radius: 20px;
 }
+#button-frame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loadMore{
+    margin-top: 16px;
+    background-color: var(--accent);
+    font: var(--headingSmall);
+    color: var(--moreContrastText);
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    padding: 8px 32px;
+}
 h2{
     font: var(--headingBig);
     color:var(--moreContrastText);

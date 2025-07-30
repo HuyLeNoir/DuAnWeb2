@@ -1,7 +1,7 @@
 h1{
     width: 100%;
     font: var(--headingBig);
-    color: var(--text);
+    color: var(--moreContrastText);
 }
 #home-banner{
     aspect-ratio: 1280/400;

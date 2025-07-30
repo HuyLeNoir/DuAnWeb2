@@ -109,24 +109,27 @@ main{
 /* pagination */
 .nav_number{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
     width: 380px;
     margin: auto;
 }
-.nav_number>span{
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    padding: 10px;
-    font: var(--bodySmall);
+.nav_number > button{
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--primary);
     border-radius: 5px;
+    cursor: pointer;
+    font: var(--bodySmall);
+    color: white;
+    background-color:  var(--background);
 }
-.nav_number > span.notHover{
-    cursor: default;
+.nav_number > button.active, .nav_number > button.active:hover{
+    background-color: var(--colorButtonHover);
 }
-.nav_number>span:not(.notHover):hover{
-    background-color: var(--accent);
+.nav_number > button:hover{
+    background-color: var(--primary);
 }
 @media (max-width: 992px) {
 

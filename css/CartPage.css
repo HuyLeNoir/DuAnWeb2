@@ -1,5 +1,6 @@
 .cartContainer{
-    display: flex;
+  grid-area: paymentMethod;
+  display: flex;
     flex-direction: column;
     gap: 30px;
 }
@@ -31,10 +32,15 @@
 }
 
 .payment-logos {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--moreContrastText);
   border-radius: 5px;
 }
 .payment-logos img {
+  padding: 2px;
   width: auto;
   height: 28px;
   margin-left: 10px;
@@ -77,4 +83,20 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+.wrapper{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "paymentMethod Sumary";
+}
+.sumaryContainer{
+  grid-area: Sumary;
+}
+@media (max-width: 768px) {
+  .wrapper{
+    grid-template-areas: "paymentMethod" "Sumary";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }

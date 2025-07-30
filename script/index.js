@@ -7,7 +7,9 @@ let currentIndex = 0;
 let maxCardShow;
 let barAmount;
 let total = 0;
+let currentList; //List game dang display
 let currentNewsAmount = 0;
+let currentGames = 0;
 const gameList = {
     //gameList kieu object
     game01: {
@@ -17,8 +19,7 @@ const gameList = {
             OS: "Windows® 7 32/64-bit / Vista 32/64 / XP",
             Processor: "Pentium 4 3.0GHz",
             Memory: "2 GB RAM",
-            Graphics:
-                "Video card with 128 MB, Shader model 2.0. ATI X800, NVidia 6600 or better",
+            Graphics: "Video card with 128 MB, Shader model 2.0. ATI X800, NVidia 6600 or better",
             DirectX: "Version 9.0c",
             Storage: "13 GB available space",
         },
@@ -26,8 +27,7 @@ const gameList = {
             OS: "Windows 7 32/64-bit / Vista 32/64 / XP",
             Processor: "Intel Core 2 Duo 2.4GHz",
             Memory: "2 GB RAM",
-            Graphics:
-                "Video Card Shader model 3.0. NVidia 7600, ATI X1600 or better",
+            Graphics: "Video Card Shader model 3.0. NVidia 7600, ATI X1600 or better",
             DirectX: "Version 9.0c",
             Storage: "13 GB available space",
         },
@@ -149,8 +149,7 @@ const gameList = {
             OS: "Windows 10/11 (64-bit)",
             Processor: "Intel Core i7-8700K or AMD Ryzen 5 3600X",
             Memory: "16 GB RAM",
-            Graphics:
-                "NVIDIA GeForce GTX 1070 8 GB or AMD Radeon RX Vega 56 8 GB",
+            Graphics: "NVIDIA GeForce GTX 1070 8 GB or AMD Radeon RX Vega 56 8 GB",
             DirectX: "Version 12",
             Storage: "60 GB available space",
         },
@@ -260,8 +259,7 @@ const gameList = {
             "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
         minimumRequirements: {
             OS: "Windows 10 (64-bit)",
-            Processor:
-                "Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)",
+            Processor: "Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)",
             Memory: "8 GB RAM",
             Graphics: "NVIDIA GTX 960 (4 GB) or AMD R9 290X (4 GB)",
             DirectX: "Version 11",
@@ -269,8 +267,7 @@ const gameList = {
         },
         recommendedRequirements: {
             OS: "Windows 10 (64-bit)",
-            Processor:
-                "Intel i5-6600k (4 core 3.5 GHz) or AMD Ryzen 5 2400 G (4 core 3.6 GHz)",
+            Processor: "Intel i5-6600k (4 core 3.5 GHz) or AMD Ryzen 5 2400 G (4 core 3.6 GHz)",
             Memory: "8 GB RAM",
             Graphics: "NVIDIA GTX 1060 (6 GB) or AMD RX 570 (4 GB)",
             DirectX: "Version 11",
@@ -382,8 +379,7 @@ const gameList = {
             "Manor Lords is a medieval strategy game featuring in-depth city building, large-scale tactical battles, and complex economic and social simulations. Rule your lands as a medieval lord – the seasons pass, the weather changes, and cities rise and fall.",
         minimumRequirements: {
             OS: "Windows 10 (64-bit)",
-            Processor:
-                "Intel Core i5-4670 (quad-core) or AMD FX-4350 (quad-core)",
+            Processor: "Intel Core i5-4670 (quad-core) or AMD FX-4350 (quad-core)",
             Memory: "8 GB RAM",
             Graphics:
                 "NVIDIA GeForce GTX 1050 (2 GB) or AMD Radeon RX 460 (4 GB) or Intel Arc A380 (6 GB)",
@@ -392,8 +388,7 @@ const gameList = {
         },
         recommendedRequirements: {
             OS: "Windows 10 (64-bit)",
-            Processor:
-                "Intel Core i5-7600 (quad-core) or AMD Ryzen 3 2200G (quad-core)",
+            Processor: "Intel Core i5-7600 (quad-core) or AMD Ryzen 3 2200G (quad-core)",
             Memory: "12 GB RAM",
             Graphics:
                 "NVIDIA GeForce GTX 1060 (6 GB) or AMD Radeon RX 580 (8 GB) or Intel Arc A580 (8 GB)",
@@ -468,8 +463,7 @@ const gameList = {
             "Broken Arrow is a large-scale real-time modern warfare tactics game that combines the complexity of joint-forces wargaming with action-packed real-time tactics gameplay.",
         minimumRequirements: {
             OS: "Windows 10 x64",
-            Processor:
-                "Intel Core i7-6700 (4×3400) / AMD Ryzen 3 2200G (4×3500)",
+            Processor: "Intel Core i7-6700 (4×3400) / AMD Ryzen 3 2200G (4×3500)",
             Memory: "8 GB RAM",
             DirectX: "Version 11",
             Graphics: "GeForce GTX 1650 (4 GB) / Radeon RX 570 (4 GB)",
@@ -477,8 +471,7 @@ const gameList = {
         },
         recommendedRequirements: {
             OS: "Windows 10 x64",
-            Processor:
-                "Intel Core i9-9900k (8×3600) / AMD Ryzen 7 5800X3D (8×3400)",
+            Processor: "Intel Core i9-9900k (8×3600) / AMD Ryzen 7 5800X3D (8×3400)",
             Memory: "16 GB RAM",
             DirectX: "Version 11",
             Graphics: "GeForce RTX 3080 (10 GB) / Radeon RX 6800 XT (16 GB)",
@@ -514,8 +507,7 @@ const gameList = {
             Processor: "Intel Core i5-7400 / AMD Ryzen 3 1200",
             Memory: "16 GB RAM",
             DirectX: "Version 12",
-            Graphics:
-                "NVIDIA GeForce GTX 1060 (6 GB) / AMD Radeon 5600XT (6 GB)",
+            Graphics: "NVIDIA GeForce GTX 1060 (6 GB) / AMD Radeon 5600XT (6 GB)",
             Storage: "60 GB available space",
         },
         recommendedRequirements: {
@@ -523,8 +515,7 @@ const gameList = {
             Processor: "Intel Core i7-10700K / AMD Ryzen 5 2600X",
             Memory: "16 GB RAM",
             DirectX: "Version 12",
-            Graphics:
-                "NVIDIA GeForce RTX 3070 (8 GB) / AMD Radeon 6700XT (12 GB)",
+            Graphics: "NVIDIA GeForce RTX 3070 (8 GB) / AMD Radeon 6700XT (12 GB)",
             Storage: "75 GB available space",
         },
 
@@ -600,8 +591,7 @@ const gameList = {
                 "AMD Zen 2 or Intel 10th Gen CPU @3.2Ghz, 8 cores / 16 threads (e.g. Ryzen 7 3700X or Core i7 10700K)",
             Memory: "16 GB RAM",
             DirectX: "Version 12",
-            Graphics:
-                "Raytracing-capable GPU, 8GB VRAM (e.g. RTX 2060 SUPER or RX 6600)",
+            Graphics: "Raytracing-capable GPU, 8GB VRAM (e.g. RTX 2060 SUPER or RX 6600)",
             Storage: "100 GB available space",
         },
         recommendedRequirements: {
@@ -610,8 +600,7 @@ const gameList = {
                 "AMD Zen 3 or Intel 12th Gen CPU @3.2Ghz, 8 cores / 16 threads (e.g. Ryzen 7 5700X or Core i7 12700K)",
             Memory: "32 GB RAM",
             DirectX: "Version 12",
-            Graphics:
-                "Raytracing-capable GPU, 10GB VRAM (e.g. RTX 3080 or RX 6800)",
+            Graphics: "Raytracing-capable GPU, 10GB VRAM (e.g. RTX 3080 or RX 6800)",
             Storage: "100 GB available space",
         },
 
@@ -768,8 +757,7 @@ const gameList = {
             Processor: "Intel Core i5 750 / AMD FX 4300",
             Memory: "4 GB RAM",
             DirectX: "Version 9.0c",
-            Graphics:
-                "GeForce GTX 470 / Radeon HD 5850 / Intel Iris Xe G7 / Radeon RX Vega 11",
+            Graphics: "GeForce GTX 470 / Radeon HD 5850 / Intel Iris Xe G7 / Radeon RX Vega 11",
             Storage: "2 GB available space",
         },
         recommendedRequirements: {
@@ -1014,8 +1002,7 @@ function loadDropdown() {
                 //show menu
                 menuList.forEach((menu, index) => {
                     menu.classList.remove("show"); //neu co 1 menu khac dang show thi reset vi tri cua menu do
-                    buttonList[index].lastElementChild.style.transform =
-                        "rotate(0deg)";
+                    buttonList[index].lastElementChild.style.transform = "rotate(0deg)";
                 });
                 chevron.style.transform = "rotate(180deg)";
                 menu.classList.add("show");
@@ -1049,15 +1036,21 @@ function loadNews() {
         slideIndex = (slideIndex + 1) % dotList.length;
         goTo(slideIndex);
     }, 5000);
-    function loadNigga(current, step){
-        if(currentNewsAmount + step > Object.keys(newsList).length){
-            step = Object.keys(newsList).length - currentNewsAmount;
-            console.log(step);
-        }
-        const newsContainer = document.querySelector(".allNews");
-        for (let i = current+1; i <= current+step; i++) {
-            const news = newsList["news" + i]; //lay news hien tai
-            newsContainer.innerHTML += `<div class="newsCard">
+    loadNigga(0, 8); //ban dau co 0 news, load 8 news
+    loadMore.onclick = () => {
+        loadNigga(currentNewsAmount, 4);
+    };
+}
+function loadNigga(current, step) {
+    const loadMore = document.getElementById("loadMore");
+    if (currentNewsAmount + step > Object.keys(newsList).length) {
+        step = Object.keys(newsList).length - currentNewsAmount;
+        console.log(step);
+    }
+    const newsContainer = document.querySelector(".allNews");
+    for (let i = current + 1; i <= current + step; i++) {
+        const news = newsList["news" + i]; //lay news hien tai
+        newsContainer.innerHTML += `<div class="newsCard" onclick="redirect404()">
                 <div class="imgFrame">
                     <img src="Asset/News/news${i}.jpg">
                 </div>
@@ -1071,17 +1064,11 @@ function loadNews() {
                     <p>${news.content}</p>
                 </div>
             </div>`;
-        }
-        currentNewsAmount += step;
-        if(currentNewsAmount >= Object.keys(newsList).length){
-            loadMore.style.display = "none";
-        }
-        
-}
-    loadNigga(0, 8); //ban dau co 0 news, load 8 news
-    loadMore.onclick = () => {
-    loadNigga(currentNewsAmount, 4);
-}
+    }
+    currentNewsAmount += step;
+    if (currentNewsAmount >= Object.keys(newsList).length) {
+        loadMore.style.display = "none";
+    }
 }
 
 function next(button) {
@@ -1089,7 +1076,6 @@ function next(button) {
 }
 function loadCart() {
     const cartContainer = document.querySelector(".Container");
-    const sumary = document.querySelector(".sumary");
     const detail = document.querySelector(".detail");
     const totalHTML = document.querySelector("#total > span");
     cartContainer.innerHTML = "";
@@ -1112,9 +1098,7 @@ function loadCart() {
                         <div class="price-game">
                             <button onclick="removeItem('${key}')"><i class="fa-solid fa-trash"></i> <span>Remove</span></button>
                             <div class="price1">
-                                <p class="sale">-${
-                                    100 * gameList[key].Sale
-                                }%</p>
+                                <p class="sale">-${100 * gameList[key].Sale}%</p>
                                 <div>
                                     <p class="last-price">${gameList[
                                         key
@@ -1135,15 +1119,30 @@ function loadCart() {
                 </div>`;
         if (gameList[key].onSale === false) {
             //neu game co sale
-            cartContainer.lastElementChild
-                .querySelector(".price1")
-                .classList.add("noSale");
+            cartContainer.lastElementChild.querySelector(".price1").classList.add("noSale");
         }
 
         //>>>>>>>>>>>>>>>>>>>>>>Sumary
-        detail.innerHTML += `<p>${gameList[key].displayName}<span>${gameList[
-            key
-        ]
+        detail.innerHTML += `<p>${gameList[key].displayName}<span>${gameList[key]
+            .getPrice()
+            .toLocaleString("vi-VN", {
+                style: "currency",
+                currency: "VND",
+            })}</span></p>`;
+        total += gameList[key].getPrice();
+    });
+    totalHTML.innerHTML = total.toLocaleString("vi-VN", {
+        style: "currency",
+        currency: "VND",
+    });
+}
+function loadSumary() {
+    const detail = document.querySelector(".detail");
+    const totalHTML = document.querySelector("#total > span");
+
+    let total = 0;
+    Object.keys(localStorage).forEach((key) => {
+        detail.innerHTML += `<p>${gameList[key].displayName}<span>${gameList[key]
             .getPrice()
             .toLocaleString("vi-VN", {
                 style: "currency",
@@ -1175,9 +1174,7 @@ function showNav(element) {
 function loadBars() {
     const barContainer = document.querySelector(".barContainer");
     const gameCardList = document.querySelectorAll(".GameCard");
-    maxCardShow = Math.floor(
-        container.clientWidth / gameCardList[0].clientWidth
-    );
+    maxCardShow = Math.floor(container.clientWidth / gameCardList[0].clientWidth);
     barAmount = Math.ceil(gameCardList.length / maxCardShow);
     barContainer.innerHTML = "";
     for (let i = 1; i <= barAmount; i++) {
@@ -1220,6 +1217,8 @@ function loadGame() {
     //-------------------------------------------------Game page------------------------------------------------------------------//
     const wrapper = document.querySelector(".wrapper");
     const gameID = document.getElementById("gameID").getAttribute("data-id"); //lay game id
+    const addCartButton = document.querySelector(".Container > button");
+    addCartButton.onclick = () => addToCart(gameID);
     const game = gameList[gameID];
     function loadGameInformation() {
         const requirementsContainer = document.querySelector(".requirements");
@@ -1363,10 +1362,10 @@ function loadGame() {
         priceContainer.innerHTML = `
         <span class="saleAmount">-${game.Sale * 100}%</span>
             <div class="price">
-              <p class="originalPrice">${game.originalPrice.toLocaleString(
-                  "vi-VN",
-                  { style: "currency", currency: "VND" }
-              )}</p>
+              <p class="originalPrice">${game.originalPrice.toLocaleString("vi-VN", {
+                  style: "currency",
+                  currency: "VND",
+              })}</p>
               <h3 class="gamePrice">${game.getPrice().toLocaleString("vi-VN", {
                   style: "currency",
                   currency: "VND",
@@ -1421,7 +1420,7 @@ function loadGallery() {
         };
     });
 }
-function addToCart() {
+function addToCart(gameID) {
     if (localStorage.getItem(gameID) !== null) {
         dialog.innerHTML = `<div class="wrapper">
                     <div class="bar">
@@ -1470,6 +1469,9 @@ function checkButtStatus() {
 function redirect(link) {
     window.location.href = "gameHTML/" + link + ".html";
 }
+function redirect404() {
+    window.location.href = "Sorry.html";
+}
 function loadHome() {
     Object.keys(gameList).forEach((key) => {
         const game = gameList[key];
@@ -1477,23 +1479,21 @@ function loadHome() {
             container.innerHTML += `                
                 <div class="GameCard" onclick="redirect('${game.dataName}')">
                     <div class="image-container">
-                        <img src="${game.coverImage}" alt="gameCover">
+                        <img src="./Asset/${game.dataName}/cover.jpg" alt="gameCover">
                     </div>
                     <div class="content">
                         <h1>${game.displayName}</h1>
                         <div class="priceGroup">
                             <h6 class="saleAmount">-${game.Sale * 100}%</h6>
                             <div class="price">
-                                <p>${game.originalPrice.toLocaleString(
-                                    "vi-VN",
-                                    { style: "currency", currency: "VND" }
-                                )}</p>
-                                <p class="sale">${game
-                                    .getPrice()
-                                    .toLocaleString("vi-VN", {
-                                        style: "currency",
-                                        currency: "VND",
-                                    })}</p>
+                                <p>${game.originalPrice.toLocaleString("vi-VN", {
+                                    style: "currency",
+                                    currency: "VND",
+                                })}</p>
+                                <p class="sale">${game.getPrice().toLocaleString("vi-VN", {
+                                    style: "currency",
+                                    currency: "VND",
+                                })}</p>
                             </div>  
                         </div>
                     </div>
@@ -1506,71 +1506,107 @@ function loadHome() {
 const games = Object.values(gameList);
 
 //Thêm gamecard
-function renderGames(list) {
+function renderGames(list, pageSize) {
+    console.log(list.length);
     container.innerHTML = "";
-    list.forEach(function (game) {
-        const disc = Math.round(game.Sale * 100);
-        const discountPrice = game.getPrice().toLocaleString("vi-VN");
-        const originalPrice = game.originalPrice.toLocaleString("vi-VN");
-
+    currentList = list; //use later lol
+    pageSize = Math.min(pageSize, list.length);
+    for (let i = 0; i < pageSize; i++) {
+        const game = list[i];
         const priceGroup = game.onSale ? "priceGroup" : "priceGroup noSale";
-
-        const saleTag = `<h6 class="saleAmount">-${disc}%</h6>`;
-        const priceBL = `<div class="price">
-          <p>${originalPrice} ₫</p>
-          <p class="sale">${discountPrice} ₫</p>
-      </div>`;
-
-        const gameHTML = `
-      <div class="GameCard" onclick="redirect('${game.dataName}')">
+        container.innerHTML += `<div class="GameCard" onclick="redirect('${game.dataName}')">
         <div class="image-container">
           <img src="./Asset/${game.dataName}/cover.jpg" alt="${game.displayName}">
         </div>
         <div class="content">
           <h1>${game.displayName}</h1>
           <div class="${priceGroup}">
-            ${saleTag}
-            ${priceBL}
+            <h6 class="saleAmount">-${game.Sale * 100}%</h6>
+            <div class="price">
+                <p>${game.originalPrice.toLocaleString("vi-VN")}₫</p>
+                <p class="sale">${game.getPrice().toLocaleString("vi-VN")}₫</p>
+            </div>
           </div>
         </div>
       </div>
     `;
-        container.innerHTML += gameHTML;
-    });
+    }
+    loadPagination(list);
+    currentGames += pageSize;
     if (list.length == 0) {
         container.innerHTML += "<h1>NO RESULT</h1>";
     }
 }
 
 // ======================== Sort =============================
+function loadPagination(list) {
+    const paginationContainer = document.querySelector(".nav_number");
+    paginationContainer.innerHTML = "";
+    const pageAmount = Math.ceil(list.length / 10);
+    for (let i = 0; i < pageAmount; i++) {
+        i == 0 ? (state = 'class="active"') : (state = "");
+        paginationContainer.innerHTML += `<button ${state} onclick="goToPage(${i}, this)">${
+            i + 1
+        }</button>`;
+    }
+}
+function goToPage(index, thisButton) {
+    container.innerHTML = "";
+    const gamePerPage = 10;
+    const buttonList = document.querySelectorAll(".nav_number > button");
+    buttonList.forEach((button) => {
+        button.classList.remove("active");
+    });
+    thisButton.classList.add("active");
+    //page1: list[0] -> list[9]
+    //page2: list[10] -> list[19]
+    //page3: list[20] -> list[29];
+    let start = index * gamePerPage;
+    end = Math.min(start + 10, currentList.length);
+    for (let i = start; i < end; i++) {
+        const game = currentList[i];
+        const priceGroup = game.onSale ? "priceGroup" : "priceGroup noSale";
+        container.innerHTML += `<div class="GameCard" onclick="redirect('${game.dataName}')">
+        <div class="image-container">
+          <img src="./Asset/${game.dataName}/cover.jpg" alt="${game.displayName}">
+        </div>
+        <div class="content">
+          <h1>${game.displayName}</h1>
+          <div class="${priceGroup}">
+            <h6 class="saleAmount">-${game.Sale * 100}%</h6>
+            <div class="price">
+                <p>${game.originalPrice.toLocaleString("vi-VN")}₫</p>
+                <p class="sale">${game.getPrice().toLocaleString("vi-VN")}₫</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    }
+}
 function loadStore() {
-    document
-        .getElementById("sort-by-name")
-        .addEventListener("click", function () {
-            const renSort = games.slice().sort(function (a, b) {
-                return a.displayName.localeCompare(b.displayName);
-            });
-            renderGames(renSort);
+    loadDropdown();
+    document.getElementById("sort-by-name").addEventListener("click", function () {
+        const renSort = games.slice().sort(function (a, b) {
+            return a.displayName.localeCompare(b.displayName);
         });
+        renderGames(renSort, 10);
+    });
 
-    document
-        .getElementById("sort-by-price")
-        .addEventListener("click", function () {
-            const renSort = games.slice().sort(function (a, b) {
-                return a.getPrice() - b.getPrice();
-            });
-            renderGames(renSort);
+    document.getElementById("sort-by-price").addEventListener("click", function () {
+        const renSort = games.slice().sort(function (a, b) {
+            return a.getPrice() - b.getPrice();
         });
+        renderGames(renSort, 10);
+    });
 
     // SortByYear
-    document
-        .getElementById("sort-by-release")
-        .addEventListener("click", function () {
-            const renSort = games.slice().sort(function (a, b) {
-                return b.yearRelease - a.yearRelease;
-            });
-            renderGames(renSort);
+    document.getElementById("sort-by-release").addEventListener("click", function () {
+        const renSort = games.slice().sort(function (a, b) {
+            return b.yearRelease - a.yearRelease;
         });
+        renderGames(renSort, 10);
+    });
 
     document
         .querySelectorAll("#sort-by-name, #sort-by-price, #sort-by-release")
@@ -1578,15 +1614,12 @@ function loadStore() {
             item.addEventListener("click", function (e) {
                 e.stopPropagation();
                 document
-                    .querySelectorAll(
-                        "#sort-by-name, #sort-by-price, #sort-by-release"
-                    )
+                    .querySelectorAll("#sort-by-name, #sort-by-price, #sort-by-release")
                     .forEach(function (el) {
                         el.classList.remove("checked");
                     });
                 this.classList.add("checked");
-                document.getElementById("sortType").textContent =
-                    this.textContent.trim();
+                document.getElementById("sortType").textContent = this.textContent.trim();
             });
         });
     // =====================================================================================
@@ -1632,12 +1665,10 @@ function loadStore() {
 
     document.querySelectorAll("#All-cs, #Yes-cs, #No-cs").forEach((item) => {
         item.addEventListener("click", function () {
-            document
-                .querySelectorAll("#All-cs, #Yes-cs, #No-cs")
-                .forEach((i) => {
-                    i.classList.remove("checked");
-                    i.querySelector("i")?.remove();
-                });
+            document.querySelectorAll("#All-cs, #Yes-cs, #No-cs").forEach((i) => {
+                i.classList.remove("checked");
+                i.querySelector("i")?.remove();
+            });
 
             this.classList.add("checked");
 
@@ -1655,7 +1686,7 @@ function loadStore() {
         const filteredGames = Object.values(gameList).filter(function (game) {
             return game.displayName.toLowerCase().includes(keyword);
         });
-        renderGames(filteredGames);
+        renderGames(filteredGames, 10);
     });
 }
 function filterGames() {
@@ -1673,20 +1704,16 @@ function filterGames() {
     }
 
     // onSale
-    const saleType = document.querySelector(
-        "#All-cs.checked, #Yes-cs.checked, #No-cs.checked"
-    )?.id;
-    if (saleType === "Yes-cs")
-        filtered = filtered.filter((game) => game.onSale === true);
-    if (saleType === "No-cs")
-        filtered = filtered.filter((game) => game.onSale === false);
+    const saleType = document.querySelector("#All-cs.checked, #Yes-cs.checked, #No-cs.checked")?.id;
+    if (saleType === "Yes-cs") filtered = filtered.filter((game) => game.onSale === true);
+    if (saleType === "No-cs") filtered = filtered.filter((game) => game.onSale === false);
 
-    renderGames(filtered);
+    renderGames(filtered, 10);
 }
 // Render store.html
 if (window.location.href.includes("store.html")) {
     loadStore();
-    renderGames(games);
+    renderGames(games, 10);
 }
 if (window.location.href.includes("home.html")) {
     loadHome();
@@ -1699,8 +1726,7 @@ function validateEmail(email) {
     return true;
 }
 function validatePassword(password) {
-    var passRegex =
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
+    var passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
     return passRegex.test(password.value);
 }
 

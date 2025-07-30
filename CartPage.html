@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,14 @@
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/CartPage.css">
     <link rel="icon" type="image/png" href="./DuAnWeb/Asset/logoEG.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
     <header>
         <button onclick="showNav(this)">
-                <i class="fa-solid fa-bars"></i>  
-        </button>   
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <nav>
             <div class="nav_left">
                 <a class="logo" href="home.html">
@@ -42,7 +43,8 @@
         </nav>
     </header>
     <main>
-        <div class="Container">
+        <div class="wrapper">
+            <div class="Container">
             <h1>Choose your payment method</h1>
             <div class="paymentContainer">
                 <div class="payment-option">
@@ -51,9 +53,9 @@
                         Credit card
                     </label>
                     <div class="payment-logos">
-                        <img src="Asset/gpay.webp" alt="GPay">
-                        <img src="Asset/applepay.png" alt="Apple Pay">
-                        <img src="Asset/paypal.png" alt="PayPal">
+                        <img src="Asset/napasLogo.png" alt="GPay">
+                        <img src="Asset/visaLogo.png" alt="Apple Pay">
+                        <img src="Asset/masterCard.png" alt="PayPal">
                     </div>
                 </div>
                 <div class="payment-option">
@@ -65,34 +67,33 @@
                         <img src="Asset/gpay.webp" alt="GPay">
                         <img src="Asset/applepay.png" alt="Apple Pay">
                         <img src="Asset/paypal.png" alt="PayPal">
-                    </div>  
-            </div>
+                    </div>
                 </div>
-                <div class="info-box">
-                    <i class="fa-solid fa-circle-info"></i>
-                    You will be redirected to complete your purchase.</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-circle-info"></i>
+                You will be redirected to complete your purchase.</p>
+            </div>
+            <p class="note">
+                You have a withdrawal right during 14 days from the date of purchase.
+                However our refund policy allows you to ask for a refund during 14 days
+                if you have 2h or less of playtime.
+            </p>
+            </div>
+            <div class="sumaryContainer">
+            <h1>Sumary</h1>
+            <div class="sumary">
+                <p>Game(s) <span>Price</span></p>
+                <div class="detail">
+                    <!--from js-->
                 </div>
-                <p class="note">
-                    You have a withdrawal right during 14 days from the date of purchase.
-                    However our refund policy allows you to ask for a refund during 14 days
-                    if you have 2h or less of playtime.
-                </p>
-                <button class="butcon">Continue</button>
+                <p>Gift code: <span><input class="input-promocode" type="text"
+                            placeholder="Enter your giftcode"></span></span></p>
+                <p>Discount<span>0đ</span></p>
+                <p id="total">Total:<span>420.000đ</span></p>
             </div>
-    <div class="sumaryContainer">
-        <h1>Sumary</h1>
-        <div class="sumary">
-            <p>Game(s) <span>Price</span></p>
-            <div class="detail">
-                <p>ULTRAKILL SALE<span>120.000đ</span></p>
-                <p>ULTRAKILL NOT SALE<span>300.000đ</span></p>
             </div>
-            <p>Gift code: <span><input class="input-promocode" type="text" placeholder="Enter your giftcode"></span></span></p>
-            <p>Discount<span>0đ</span></p>
-            <p>Total:<span>420.000đ</span></p>
         </div>
-        <a href="CartPage.html" class="go-to-payment">Go to payment</a>
-    </div>
     </main>
     <footer>
         <img id="img-footer" src="./Asset/logoEG.png" alt="">
@@ -127,5 +128,9 @@
         </div>
     </footer>
     <script src="script/index.js"></script>
+    <script>
+        loadSumary();
+    </script>
 </body>
+
 </html>

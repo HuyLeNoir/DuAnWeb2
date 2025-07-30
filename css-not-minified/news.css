@@ -1,0 +1,113 @@
+main{
+        padding: 0px 80px;
+}
+/* slide navigation */
+
+button{
+    transition: all ease 0.3s;
+    border: none;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+}
+button.active{
+    width: 26px;
+    border-radius: 20px;
+}
+#button-frame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loadMore{
+    margin-top: 16px;
+    background-color: var(--accent);
+    font: var(--headingSmall);
+    color: var(--moreContrastText);
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    padding: 8px 32px;
+}
+h2{
+    font: var(--headingBig);
+    color:var(--moreContrastText);
+    font-weight: var(--medium);
+}
+h1{
+    text-align: center;
+    font: var(--titleSmall);
+    color: var(--moreContrastText);
+    font-weight: var(--medium);
+}
+/*Hot news */
+
+.hotnews{
+    overflow: hidden;
+}
+.news-container{
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    width: 300%;
+}
+.news-container > div{
+    width: 100%;
+    color: white;
+}
+.navButton{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* hot news card */
+
+.news{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+    "image content";
+    gap: 10px
+}
+.news > .news-content{
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+}
+.news-content > p {
+    color: var(--textLessEmphasize);
+    font: var(--bodyBig);
+    height: 100%;
+    text-overflow: ellipsis;
+}
+.news > .image-frame{
+    grid-area: image;
+}
+.image-frame > img{
+    object-fit: cover;
+    width: 100%;
+}
+@media (max-width: 992px) {
+    main{
+        padding: 0px 40px;
+    }
+}
+@media (max-width: 767px) {
+    main{
+        padding: 0px 20px;
+    }
+    .news{
+        grid-template-columns: 1fr;
+        grid-template-areas: "image" "content";
+    }
+    .allNews{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+@media (max-width: 576px){
+    main{
+        padding: 0px;
+    }
+}

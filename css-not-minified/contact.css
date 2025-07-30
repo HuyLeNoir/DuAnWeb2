@@ -1,0 +1,198 @@
+
+h1{
+    font: var(--headingBig);
+    color: var(--moreContrastText);
+}
+h2{
+    color: var(--moreContrastText);
+    font: var(--headingMedium)
+}
+h3{
+    font: var(--bodySmall);
+    text-align: center;
+}
+#error{
+  width: 100%;
+  color: hsl(0, 100%, 40%);
+}
+p{
+    font: var(--bodyBig);
+    color: var(--moreContrastText);
+}
+main{
+    gap: 20px;
+}
+a.link{
+    color: var(--colorButtonHover);
+}
+p.inline{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+p>span{
+    color: var(--accent);
+}
+.customercare,.media,.office{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Social{
+    display: flex;
+    gap: 20px;
+}
+.Social > a{
+    transition: all 0.3s ease;
+    color: var(--moreContrastText);
+    font-size: 32px;
+}
+
+.Social > a:hover{
+    color: var(--accent);
+}
+.report-issue{
+    display: flex;
+    flex-direction: column;
+}
+.input-report-issue{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    width: 500px;
+    margin: auto;
+}
+label{
+    font: var(--bodyBig);
+    color: var(--textLessEmphasize);
+}
+label > span{
+    color: hsl(0, 100%, 40%);
+}
+.input-report-issue>input{
+    border-radius: 5px;
+    padding: 16px 10px;
+    font: var(--bodyBig);
+    color: var(--background);
+    border: none;
+}
+
+.input-report-issue>textarea{
+    border-radius: 5px;
+    padding: 16px 10px;
+    font: var(--bodyBig);
+    color: var(--background);
+    height: 150px;
+    border: none;
+}
+textarea::placeholder{
+    color: #666;
+    font: var(--bodySmall)
+}
+input:focus{
+    border: none;
+    outline: none;
+}
+textarea:focus{
+    outline: none;
+    font: var(--bodySmall);
+}
+i{
+    transition: all 0.3s ease;
+}
+/*select menu*/
+.select-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--primary);
+}
+.select-menu.active .select-bt i{
+    transform: rotate(-180deg);
+}
+.select-menu .select-bt{
+    width: 100%;
+    display: flex;
+    background-color: var(--moreContrastText);
+    color: var(--primary);
+    padding: 16px 10px;
+    font: var(--bodySmall);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+
+}
+.select-bt>i, .option.i{
+    align-content: center;
+    height: var(--bodySmall);
+}
+/* animated dropdown */
+.options{
+    display: grid;
+    transition: all 0.3s ease;
+    grid-template-rows: 0fr;
+}
+.options > div{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.options.display{
+    grid-template-rows: 1fr;
+}
+.option{
+    transition: all 0.3s ease;
+    display: flex;
+    width: 100%;
+    padding: 10px 5px;
+    background-color: var(--moreContrastText);
+    color: var(--primary);
+    border-radius: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+}
+.option.selected{
+    background-color: var(--secondary);
+    color: var(--text);
+}
+.option.selected:hover{
+    background-color: var(--secondary);
+}
+.option:hover{
+    background-color: var(--textLessEmphasize);
+}
+.option-text{
+    font: var(--bodySmall);
+    color: var(--primary);
+}
+.option.selected > .option-text{
+    color: var(--moreContrastText);
+}
+.option i{
+    display:none;
+}
+.option.selected i{
+    display: block;
+    align-content: center;
+}
+.send{
+    cursor: pointer;
+    font: var(--bodyBig);
+    color: var(--moreContrastText);
+    padding: 4px 32px;
+    margin: auto;
+    border: none;
+    background-color: var(--accent);
+    transition: all 0.3s ease;
+    border-radius: 200000px;
+}
+.input-report-issue>button:hover{
+    background-color: var(--colorButtonHover);
+}

@@ -1,0 +1,145 @@
+h1{
+    width: 100%;
+    font: var(--headingBig);
+    color: var(--text);
+    text-align: left;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 80px;
+}
+/* sort  */
+.sort_game{
+    width: 100%;
+    display: flex;
+    color: var(--text);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px ;
+}
+
+.sort_game_right{
+    background-color: var(--primary);
+    padding: 10px;
+    font-size: medium;
+}
+.searchicon2{
+    height: 15px;
+}
+.searchInput{
+    color: var(--text);
+    background-color: var(--primary);
+    border: none;
+}
+.searchInput input{
+    border: none;
+}
+.sort_game_left button{
+    color: var(--text);
+    background-color: var(--background);
+    border: none;
+    padding: 5px 10px;
+    font: var(--bodySmall);
+    border-radius: 10px;
+}
+
+#sortType, #onSale{
+    color: var(--accent);
+}
+/* Container dropdown */
+.sort_game_left{
+    display: flex;
+    gap: 20px;
+}
+.sort-click{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.sort-click > i{
+    transition: all 0.3s ease;
+}
+.sort-click:hover{
+    background-color: var(--primary);
+}
+.dropdown-menu{
+    transition: all 0.3s ease;
+    z-index: 999;
+    display:grid;
+    position: absolute;
+    list-style-type: none;
+    background-color: var(--background);
+    gap: 5px;
+    overflow: hidden;
+    grid-template-rows: 0fr;
+}
+.dropdown-menu li{
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font: var(--small);
+    cursor: pointer;
+    background-color: var(--background);
+    width: 150px ;
+    height: 30px;
+    border-radius: 5px;
+}
+.dropdown-menu div{
+    overflow: hidden;
+}
+.dropdown-menu.show{
+    grid-template-rows: 1fr;
+}
+.dropdown-menu  li.checked{
+    background-color: var(--secondary);
+}
+.dropdown-menu  li:not(.checked) > i{
+    display: none;
+}
+.dropdown-menu li:hover{
+    background-color: var(--primary);
+}
+.dropdown-menu  li.checked:hover{
+    background-color: var(--secondary);
+}
+
+/* pagination */
+.nav_number{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 380px;
+    margin: auto;
+}
+.nav_number > button{
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    cursor: pointer;
+    font: var(--bodySmall);
+    color: white;
+    background-color:  var(--background);
+}
+.nav_number > button.active, .nav_number > button.active:hover{
+    background-color: var(--colorButtonHover);
+}
+.nav_number > button:hover{
+    background-color: var(--primary);
+}
+@media (max-width: 992px) {
+
+    .card-overlay{
+        padding: 20px 20px;
+    }
+}
+@media (max-width: 767px) {
+
+}
+@media (max-width: 576px){
+
+}

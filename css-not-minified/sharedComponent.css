@@ -1,0 +1,319 @@
+/* game Card here*/
+.AG_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    color: white;
+    justify-content: center;
+}
+.GameCard{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.GameCard:hover > .content{
+    background-color: var(--secondary);
+}
+.GameCard:hover img{
+    scale: 1.2;
+}
+.GameCard > .image-container{
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.image-container > img{
+    transition: all 0.3s ease;
+    width: 100%;
+}
+.content{
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: var(--primary);
+    overflow: hidden;
+    width: 100%;
+}
+.content > .priceGroup{
+    display: flex;
+    align-items: center;
+
+}
+.content > h1{
+    height: 80px;
+    font: var(--headingSmall);
+    font-weight: var(--medium);
+    color: var(--text);
+    text-align: left;
+}
+.priceGroup > .saleAmount{
+    font: var(--bodyBig);
+    font-weight: var(--medium);
+    background-color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 10px;
+    color: var(--moreContrastText);
+}
+.priceGroup > .price{
+    margin-left: auto;
+}
+.priceGroup.noSale .saleAmount{
+    visibility: hidden;
+}
+.priceGroup.noSale .price > p:not(.sale){
+    visibility: hidden;
+}
+.priceGroup.noSale .price > p{
+    color: var(--text);
+}
+.price >p{
+    text-decoration: line-through;
+    font: var(--bodyBig);
+    color: var(--textLessEmphasize);
+    font-weight: var(--medium);
+}
+.price >p.sale{
+    text-align: right;
+    text-decoration: none;
+    color: var(--accent);
+}
+
+/* feature game card here */
+
+/* scrollable */
+.AG_container.Scroll{ 
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+}
+.AG_container.Scroll > .GameCard{
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 250px;
+}
+
+/* notscrollable */
+.FG_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    gap: 20px;
+    width: 100%;
+}
+.tag{
+    font: var(--smaller);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.tag > span{
+    white-space: nowrap;
+    padding: 5px 10px;
+    background-color: var(--secondary);
+    border-radius: 1000px;
+}
+.gamecard1{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary);
+    border-radius: 16px; 
+}
+.gamename{
+    margin-top: 10px;
+}
+.gamename > span{
+    font: var(--bodyBig);
+    color:var(--textLessEmphasize);
+}
+.gamename > h2{
+    font: var(--headingSmall);
+    font-weight: var(--medium);
+}
+.gameinfor{
+    width: 100%;
+    padding: 16px;
+}
+.gameCardImgFrame{
+    aspect-ratio: 1 / 1;
+}
+.gameCardImgFrame > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.card-overlay{
+    cursor: pointer;
+    justify-content: space-between;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    padding: 20px 10px;
+}
+.card-overlay>h3{
+    font: var(--headingBig);
+    font-weight: var(--medium);
+    text-align: center;
+}
+.card-overlay>p{
+    text-align: left;
+    font: var(--bodySmall);
+
+}
+.card-overlay>a{
+    transition: all 0.3s ease;
+    font: var(--bodyBig);
+    color: white;
+    background-color: var(--accent);
+    text-align: center;
+    padding: 4px 16px;
+    border-radius: 100px;
+    text-decoration: none;
+}
+.card-overlay>a:hover{
+    background-color: var(--colorButtonHover);
+}
+.gamecard1:hover .card-overlay{
+    opacity: 1;
+}
+.gameinfor{
+    display: flex;
+    flex-direction: column;
+}
+
+/* news card here */
+.newsCard{
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+}
+.newsCard:hover{
+    background-color: var(--secondary);
+}
+.newsCard:hover img{
+    scale: 1.1;
+}
+.newsCard .imgFrame{
+    width: 100%;
+    overflow: hidden;
+}
+.imgFrame > img{
+    transition: all 0.3s ease;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+
+}
+h4{
+    margin-top: 5px;
+    font: var(--headingSmall);
+    font-size: min(3vw, 1.563rem);
+    font-weight: var(--medium);
+    color: var(--moreContrastText);
+    line-height: 1.2;
+}
+.newsCardContent{
+    padding: 10px;
+}
+.newsCardContent > p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 5px;
+    width: 100%;
+    font: var(--bodySmall);
+    color: var(--textLessEmphasize);
+    text-overflow: ellipsis;
+}
+h3{
+    font: var(--headingMedium);
+    font-weight: var(--medium);
+    color: var(--moreContrastText);
+}
+.header > span{
+    font: var(--bodySmall);
+    color: var(--textLessEmphasize);
+}
+.header > span.topic{
+    color: var(--accent);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+/* all news container */
+
+.allNews{
+    gap: 16px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1440px){
+}
+@media (max-width: 1200px){
+    .card-overlay{
+        padding: 20px 10px;
+    }
+    .card-overlay > p{
+        font: var(--small);
+    }
+    .card-overlay > h3{
+        font: var(--headingSmall);
+        font-weight: var(--medium);
+    }
+}
+@media (max-width: 992px) {
+    .AG_container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .allNews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .AG_container.Scroll > .GameCard{
+        width: 200px;
+    }
+    .price > p{
+        font: var(--bodySmall);
+        font-weight: var(--medium);
+    }
+    .content > h1{
+        font: var(--bodyBig);
+        font-weight: var(--medium);
+    }
+}
+@media (max-width: 768px){
+    .AG_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .FG_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .priceGroup > .saleAmount{
+        padding: 4px 8px;
+    }
+    
+}
+@media (max-width: 576px){
+    .AG_container.Scroll > .GameCard{
+        width: 180px;
+    }
+}
